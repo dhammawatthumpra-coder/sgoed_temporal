@@ -1,0 +1,27 @@
+{
+  "title": "SGOED — Temporal Emergence from Dynamical Observer Coupling: A Matrix Model for Observer-Dependent Symmetry Breaking (Preprint v6)",
+  "description": "Toy-level computational demonstration in which a dynamical observer system Y creates a temporal direction in a main matrix system X via directional coupling -gXY·v̂²·Tr(X⁴), with IKKT-like stability gates. Audited results: eigenvalue condensation ratio 4.55±0.35 vs baseline 1.10±0.05 (well over 50σ), λ_max/λ_2 ≈ 23 (rank-1), 100% temporal-observer alignment, first-order bistability/hysteresis; a 30-seed follow-up gives a weak observer-dimension trend (slope ≈ -0.08, p=0.003) and shows the earlier n=5 pairwise significance (p=0.049) was a small-sample fluctuation (t=0.52, p=0.61 at n=30). Scans are two one-dimensional slices (d∈{2,3,4,5} at N=6; N∈{4..16} at d=3). Stated plainly: an engineered toy model, not an emergence claim. Ships manuscript (Markdown/LaTeX/PDF), engine, audit scripts and result JSONs; 100% reproducible with fixed seeds.",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "6.0.0",
+  "creators": [
+    {
+      "name": "Sutipong Chanpengpad",
+      "affiliation": "Independent Researcher, Chiang Rai, Thailand",
+      "orcid": "0009-0001-4069-8576"
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "keywords": [
+    "matrix models",
+    "dynamical observer",
+    "temporal emergence",
+    "symmetry breaking",
+    "eigenvalue condensation",
+    "bistability",
+    "toy model",
+    "reproducible computational physics"
+  ],
+  "language": "eng"
+}

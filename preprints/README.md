@@ -24,3 +24,22 @@ standalone from inside `code/` (scripts insert their folder into
 `sys.path`). Precomputed results are included under `results/`.
 
 **License & citation:** see `LICENSE` and `CITATION.cff` in each folder.
+
+---
+
+## Zenodo metadata (`.zenodo.json`)
+
+Each preprint folder carries its own `.zenodo.json` (the format Zenodo's
+GitHub integration reads). Upload via the web form, or — when publishing
+through the GitHub→Zenodo integration — the file **at the repo root**
+(`V5/.zenodo.json`) is read per tagged commit:
+
+- **tag `v7.0.0`** → root already carries the v7 metadata (current HEAD).
+- **tag `v6.0.0`** → before tagging, copy the v6 variant to the root:
+  `cp preprints/v6_condensation/.zenodo.json .zenodo.json` (then commit,
+  then tag). The v6 `.zenodo.json` is preserved in the v6 preprint folder.
+
+After Zenodo mints the DOIs, fill them into `CITATION.cff` (both folders)
+and the `doi/url` fields there. The description fields in `.zenodo.json`
+are kept plain-ASCII-safe for the ingest pipeline (the manuscripts carry
+the full math).
