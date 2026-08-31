@@ -1,0 +1,116 @@
+{
+  "N_16": {
+    "mode_1": {
+      "name": "1. Baseline (Uncoupled Null)",
+      "mean_D": -0.6,
+      "std_D": 11.456002793295749,
+      "mean_spectral_ratio": 2.4422399045287158,
+      "std_spectral_ratio": 0.1394699251351952,
+      "alignment_pct": 100.0,
+      "time_seconds": 6.198899030685425
+    },
+    "mode_2": {
+      "name": "2. Quartic Coupling ONLY (Pure Emergence Test)",
+      "mean_D": -34.0,
+      "std_D": 13.885243966167826,
+      "mean_spectral_ratio": 3.0668854676763173,
+      "std_spectral_ratio": 1.24923064459595,
+      "alignment_pct": 100.0,
+      "time_seconds": 2.4425880908966064
+    },
+    "mode_3": {
+      "name": "3. Relational Observer SVD",
+      "mean_D": -37.8,
+      "std_D": 8.55336191213724,
+      "mean_spectral_ratio": 3.716094062170528,
+      "std_spectral_ratio": 1.3720752687210545,
+      "alignment_pct": 100.0,
+      "time_seconds": 2.397491693496704
+    },
+    "mode_4": {
+      "name": "4. Global SVD (v12 Baseline)",
+      "mean_D": -12.9,
+      "std_D": 14.996332885075605,
+      "mean_spectral_ratio": 7.309328486003745,
+      "std_spectral_ratio": 0.3368210694897273,
+      "alignment_pct": 100.0,
+      "time_seconds": 2.7234702110290527
+    }
+  },
+  "N_24": {
+    "mode_1": {
+      "name": "1. Baseline (Uncoupled Null)",
+      "mean_D": 2.0,
+      "std_D": 18.110770276274835,
+      "mean_spectral_ratio": 2.8819661567202277,
+      "std_spectral_ratio": 0.2091134018659133,
+      "alignment_pct": 90.0,
+      "time_seconds": 17.949766635894775
+    },
+    "mode_2": {
+      "name": "2. Quartic Coupling ONLY (Pure Emergence Test)",
+      "mean_D": -49.0,
+      "std_D": 22.027255843613386,
+      "mean_spectral_ratio": 2.341188466409565,
+      "std_spectral_ratio": 0.8894546339588293,
+      "alignment_pct": 100.0,
+      "time_seconds": 17.94206929206848
+    },
+    "mode_3": {
+      "name": "3. Relational Observer SVD",
+      "mean_D": -62.4,
+      "std_D": 18.79468009836826,
+      "mean_spectral_ratio": 2.5799898765734164,
+      "std_spectral_ratio": 1.1231701912727596,
+      "alignment_pct": 100.0,
+      "time_seconds": 17.73404598236084
+    },
+    "mode_4": {
+      "name": "4. Global SVD (v12 Baseline)",
+      "mean_D": -58.7,
+      "std_D": 23.68564966387876,
+      "mean_spectral_ratio": 10.302089030846876,
+      "std_spectral_ratio": 0.30190227249559454,
+      "alignment_pct": 100.0,
+      "time_seconds": 19.104143142700195
+    }
+  },
+  "N_32": {
+    "mode_1": {
+      "name": "1. Baseline (Uncoupled Null)",
+      "mean_D": 8.2,
+      "std_D": 23.61694307060082,
+      "mean_spectral_ratio": 3.1948851358389616,
+      "std_spectral_ratio": 0.1234526190621114,
+      "alignment_pct": 80.0,
+      "time_seconds": 71.91388940811157
+    },
+    "mode_2": {
+      "name": "2. Quartic Coupling ONLY (Pure Emergence Test)",
+      "mean_D": -34.0,
+      "std_D": 18.633303518163384,
+      "mean_spectral_ratio": 2.448760551090424,
+      "std_spectral_ratio": 0.4834495555291857,
+      "alignment_pct": 100.0,
+      "time_seconds": 70.52812480926514
+    },
+    "mode_3": {
+      "name": "3. Relational Observer SVD",
+      "mean_D": -65.1,
+      "std_D": 26.368352242792874,
+      "mean_spectral_ratio": 3.080828131330833,
+      "std_spectral_ratio": 1.009111730583199,
+      "alignment_pct": 100.0,
+      "time_seconds": 69.52459049224854
+    },
+    "mode_4": {
+      "name": "4. Global SVD (v12 Baseline)",
+      "mean_D": -134.9,
+      "std_D": 23.737944308638017,
+      "mean_spectral_ratio": 12.822843705175183,
+      "std_spectral_ratio": 0.6071167925033537,
+      "alignment_pct": 100.0,
+      "time_seconds": 70.79643225669861
+    }
+  }
+}

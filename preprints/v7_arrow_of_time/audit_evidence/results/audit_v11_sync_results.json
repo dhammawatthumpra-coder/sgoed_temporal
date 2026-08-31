@@ -1,0 +1,90 @@
+{
+  "sync_transition": {
+    "g_inter_0.0": {
+      "g_inter": 0.0,
+      "mean_R_local": 0.4797249185081469,
+      "mean_phi_sync": 0.11366144206091935,
+      "std_phi_sync": 0.1391688087440441,
+      "mean_R_cross": 0.4713054837400773,
+      "time_seconds": 9.975318670272827
+    },
+    "g_inter_0.1": {
+      "g_inter": 0.1,
+      "mean_R_local": 0.47703136018167375,
+      "mean_phi_sync": 0.8237530868900208,
+      "std_phi_sync": 0.006933210238418412,
+      "mean_R_cross": 0.47264789703147586,
+      "time_seconds": 3.4561171531677246
+    },
+    "g_inter_0.2": {
+      "g_inter": 0.2,
+      "mean_R_local": 0.4861629851258608,
+      "mean_phi_sync": 0.9029244228055845,
+      "std_phi_sync": 0.008470631711421804,
+      "mean_R_cross": 0.4703072362336386,
+      "time_seconds": 3.532759189605713
+    },
+    "g_inter_0.4": {
+      "g_inter": 0.4,
+      "mean_R_local": 0.4769869946003936,
+      "mean_phi_sync": 0.9580493426120092,
+      "std_phi_sync": 0.005890749897552894,
+      "mean_R_cross": 0.4817346846732574,
+      "time_seconds": 3.3960280418395996
+    },
+    "g_inter_0.6": {
+      "g_inter": 0.6,
+      "mean_R_local": 0.47158947228638076,
+      "mean_phi_sync": 0.9754644560027066,
+      "std_phi_sync": 0.0035168104193149296,
+      "mean_R_cross": 0.4897292956754879,
+      "time_seconds": 3.63619065284729
+    },
+    "g_inter_0.8": {
+      "g_inter": 0.8,
+      "mean_R_local": 0.4731937048872391,
+      "mean_phi_sync": 0.9823392313809206,
+      "std_phi_sync": 0.00285377526833394,
+      "mean_R_cross": 0.4911586085436512,
+      "time_seconds": 3.4939346313476562
+    },
+    "g_inter_1.0": {
+      "g_inter": 1.0,
+      "mean_R_local": 0.49175225009171114,
+      "mean_phi_sync": 0.9847194860577918,
+      "std_phi_sync": 0.0013197858696217715,
+      "mean_R_cross": 0.4979121880807497,
+      "time_seconds": 3.3843111991882324
+    }
+  },
+  "universe_count_scaling": {
+    "M_2": {
+      "M": 2,
+      "mean_phi_sync": 0.9692700945827564,
+      "std_phi_sync": 0.005203192697255311,
+      "mean_R_local": 0.4432058121681496,
+      "time_seconds": 0.34878063201904297
+    },
+    "M_3": {
+      "M": 3,
+      "mean_phi_sync": 0.9628233049466619,
+      "std_phi_sync": 0.004032690979201343,
+      "mean_R_local": 0.46961467302439247,
+      "time_seconds": 1.3941102027893066
+    },
+    "M_4": {
+      "M": 4,
+      "mean_phi_sync": 0.9470678936033947,
+      "std_phi_sync": 0.005270556909948385,
+      "mean_R_local": 0.4798013277207763,
+      "time_seconds": 3.8887195587158203
+    },
+    "M_5": {
+      "M": 5,
+      "mean_phi_sync": 0.9355764047814382,
+      "std_phi_sync": 0.0028702114982070673,
+      "mean_R_local": 0.4923269001768391,
+      "time_seconds": 7.635653734207153
+    }
+  }
+}

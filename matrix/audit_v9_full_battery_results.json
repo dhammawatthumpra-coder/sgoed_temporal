@@ -1,0 +1,80 @@
+{
+  "scaling_and_dimension": {
+    "N_8": {
+      "N": 8,
+      "mean_r_hyper": 0.47631710759420987,
+      "alignment": 0.9371428571428572,
+      "dimension_d_mm": 3.888492758256011,
+      "longest_chain_L_max": 33.325714285714284,
+      "time_per_seed": 1.8333137035369873
+    },
+    "N_12": {
+      "N": 12,
+      "mean_r_hyper": 0.49416757547675283,
+      "alignment": 0.8400000000000001,
+      "dimension_d_mm": 4.044321146276417,
+      "longest_chain_L_max": 61.588571428571434,
+      "time_per_seed": 1.5022679328918458
+    },
+    "N_16": {
+      "N": 16,
+      "mean_r_hyper": 0.49858613092295395,
+      "alignment": 0.8,
+      "dimension_d_mm": 3.9896677315357785,
+      "longest_chain_L_max": 97.18285714285713,
+      "time_per_seed": 7.054907512664795
+    },
+    "N_20": {
+      "N": 20,
+      "mean_r_hyper": 0.4957751305917264,
+      "alignment": 0.7428571428571429,
+      "dimension_d_mm": 3.505040377745064,
+      "longest_chain_L_max": 113.97714285714285,
+      "time_per_seed": 40.70246744155884
+    }
+  },
+  "feedback_and_bistability": {
+    "g_yx_0.0": {
+      "g_yx": 0.0,
+      "mean_r_hyper": 0.49416757547675283,
+      "alignment": 0.8400000000000001,
+      "obs_extent": 0.01525863108359021,
+      "gate_hit_pct": 0.0
+    },
+    "g_yx_0.4": {
+      "g_yx": 0.4,
+      "mean_r_hyper": 0.4957828003147127,
+      "alignment": 0.8514285714285714,
+      "obs_extent": 0.013832858857360537,
+      "gate_hit_pct": 0.0
+    },
+    "g_yx_0.8": {
+      "g_yx": 0.8,
+      "mean_r_hyper": 0.4957661638912609,
+      "alignment": 0.8800000000000001,
+      "obs_extent": 0.014241970182073432,
+      "gate_hit_pct": 0.0
+    },
+    "g_yx_1.2": {
+      "g_yx": 1.2,
+      "mean_r_hyper": 0.49570420402141285,
+      "alignment": 0.8800000000000001,
+      "obs_extent": 0.01417900389078636,
+      "gate_hit_pct": 0.0
+    },
+    "g_yx_1.6": {
+      "g_yx": 1.6,
+      "mean_r_hyper": 0.49678538545209133,
+      "alignment": 0.8400000000000001,
+      "obs_extent": 0.014759298716671188,
+      "gate_hit_pct": 0.0
+    },
+    "g_yx_2.0": {
+      "g_yx": 2.0,
+      "mean_r_hyper": 0.49598186075057304,
+      "alignment": 0.8114285714285714,
+      "obs_extent": 0.018994465879321284,
+      "gate_hit_pct": 0.0
+    }
+  }
+}

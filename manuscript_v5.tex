@@ -1,0 +1,577 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{doi}
+
+\geometry{margin=1in}
+
+% Theorem environments
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+% Title information
+\title{\textbf{Temporal Emergence from Dynamical Observer Coupling:\\
+       A Matrix Model for Observer-Dependent Symmetry Breaking}\\[0.5cm]
+       \large Version 5: Complete Scaling Analysis and Open Questions}
+
+\author{Sutipong Chanpengpad\\
+\small Independent Researcher, Chiang Rai, Thailand\\
+\small \texttt{dhammawatthumpra@gmail.com}\\
+\small \href{https://orcid.org/0009-0001-4069-8576}{ORCID: 0009-0001-4069-8576}}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Structural Time Framework (STF) proposes that time emerges from 
+observer-dependent ordering of pre-temporal states. We present a 
+computational demonstration using a matrix model where an explicit 
+observer system $Y$ dynamically creates the temporal direction in 
+the main system $X$, without any external parameters.
+
+Our model employs a directional coupling mechanism where the observer 
+generates a direction vector $v$ from its matrix traces, and dimensions 
+of $X$ aligned with $v$ receive a temporal expansion term 
+$-g_{XY} \hat{v}_\mu^2 \text{Tr}(X_\mu^4)$. Monte Carlo simulations with statistical analysis 
+(5 seeds per configuration) show:
+
+\begin{enumerate}[leftmargin=*]
+\item Temporal emergence occurs robustly for observer dimensions
+      $d \in \{2,3,4,5\}$, with mean ratios clustering in $4.6$--$4.8$ and
+      no statistically distinguishable differences between dimensions.
+\item Perfect alignment between the temporal direction $X_{\max}$ and 
+      observer direction $v_{\max}$ in healthy emergence cases.
+\item Two-regime scaling behavior: robust emergence for $N \leq 6$ with 
+      fixed coupling, but parameter tuning required for $N \geq 7$.
+\item A paired comparison between $d=3$ and $d=4$ found no significant
+      difference ($t=1.043$, $p=0.356$); with $n=5$ seeds per condition
+      this test has limited power and does not by itself establish
+      equivalence or robustness.
+\end{enumerate}
+
+\textbf{Important Caveats:} This work represents a toy-level 
+mathematical exploration using small matrix sizes ($N \leq 8$). 
+Results demonstrate mathematical consistency, not physical reality.
+
+\medskip
+\noindent\textbf{Keywords:} dynamical observer, temporal emergence, 
+matrix models, symmetry breaking, computational demonstration
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%=============================================================================
+\section{Introduction}\label{sec:intro}
+%=============================================================================
+
+The nature of time has been debated by philosophers and physicists for 
+centuries. The Structural Time Framework (STF)~\cite{chanpengpad_stf} 
+proposes that time is not fundamental but emerges from observer-dependent 
+ordering of pre-temporal states.
+
+In our previous work~\cite{chanpengpad_sgoed_v2}, we presented a toy 
+model where temporal emergence was driven by an external adapter parameter 
+$\kappa_2$. While successful, this approach had a fundamental limitation: 
+the observer was represented as a parameter, not as a dynamical system.
+
+This paper addresses that limitation by introducing an \textbf{explicit 
+dynamical observer}---a matrix system $Y$ that dynamically creates the 
+temporal direction in the main system $X$ through coupling, without any 
+external parameters.
+
+\textbf{Important Disclaimer:} We emphasize that this work is a 
+\textbf{toy-level computational demonstration}, not empirical physics. 
+Our simulations use small matrix sizes ($N \leq 8$), finite Monte Carlo 
+samples, and idealized actions. The results demonstrate mathematical 
+consistency, not physical reality.
+
+%=============================================================================
+\section{Dynamical Observer Model}\label{sec:model}
+%=============================================================================
+
+We consider two coupled matrix systems:
+
+\textbf{Main System $X$:} $D$ Hermitian matrices $X^\mu$ of size $N \times N$.
+
+\textbf{Observer System $Y$:} $d$ Hermitian matrices $Y^a$ of size $N \times N$.
+
+The total action is:
+\begin{equation}
+S_{\text{total}} = S_X + S_Y + S_{\text{coupling}}
+\end{equation}
+
+where $S_X$ and $S_Y$ are IKKT-like actions with stability gates, and the 
+directional coupling is:
+\begin{equation}
+S_{\text{coupling}} = -g_{XY} \sum_\mu \hat{v}_\mu^2 \text{Tr}(X_\mu^4)
+\end{equation}
+
+The observer generates direction $\hat{v}$ from its traces. This coupling 
+temporalizes dimensions aligned with $\hat{v}$.
+
+\subsection{Theoretical Motivation for the Coupling}
+
+The coupling term can be understood from three perspectives:
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Effective Field Theory:} Leading-order term in $1/N$ expansion.
+\item \textbf{Symmetry Breaking:} Explicitly breaks SO(D) $\rightarrow$ SO(D-1).
+\item \textbf{Measurement Analogy:} Observer selects direction, system responds.
+\end{enumerate}
+
+\subsection{Why the Observer Does Not Temporalize Itself}
+
+The distinction between observer and system is relational, not fundamental. 
+The asymmetry in coupling reflects the measurement paradigm: the apparatus 
+measures the system, not vice versa. This avoids the self-observation paradox 
+analogous to Wigner's friend.
+
+%=============================================================================
+\section{Computational Methodology}\label{sec:method}
+%=============================================================================
+
+We use Metropolis-Hastings sampling with:
+\begin{itemize}
+\item Matrix size: $N \in \{4, 5, 6, 7, 8\}$
+\item System dimensions: $D = 6$
+\item Observer dimensions: $d \in \{2, 3, 4, 5\}$
+\item Coupling strength: $g_{XY} \in [0.8, 1.2]$
+\item Thermalization: 20--25 sweeps
+\item Measurement: 30--40 sweeps
+\item Multiple seeds: $\{42, 43, 44, 45, 46\}$
+\end{itemize}
+
+Observables measured, with $\text{extent}(X_\mu) \equiv \text{Tr}(X_\mu^2)/N$:
+\begin{align}
+\text{Ratio} &= \frac{\text{extent}(X_{\max})}{\text{mean}(\text{extent}(X_{\neq \max}))} \\
+\text{Alignment} &= \mathbb{I}(\arg\max_\mu \text{extent}(X_\mu) == \arg\max_\mu \hat{v}_\mu^2) \\
+H &= -\sum_\mu p_\mu \ln p_\mu, \quad p_\mu = \frac{\text{extent}(X_\mu)}{\sum_\nu \text{extent}(X_\nu)}
+\end{align}
+
+A configuration is classified as \textbf{Healthy} if the mean Ratio over
+the five seeds satisfies $1.5 < \overline{R} < 10.0$; the upper bound
+$R=10$ coincides with the stability-gate cutoff (\texttt{max\_extent}) used
+in the action itself, beyond which a quadratic penalty term dominates and
+suppresses further extent growth. Configurations with $\overline{R} \leq 1.5$
+are labeled Weak; none of the configurations reported below exceed the
+upper bound.
+
+%=============================================================================
+\section{Results}\label{sec:results}
+%=============================================================================
+
+\subsection{Statistical Robustness}
+
+Table~\ref{tab:stats} summarizes results for optimal parameters.
+
+\begin{table}[ht]
+\centering
+\caption{Statistical analysis ($N=6$, $g_{XY}=0.8$)}
+\label{tab:stats}
+\begin{tabular}{ccccc}
+\toprule
+$d$ & Mean Ratio & Std Dev & CV (\%) & Alignment \\
+\midrule
+3 & 4.82 & $\pm$0.24 & 5.0\% & 100\% (5/5) \\
+4 & 4.60 & $\pm$0.28 & 6.0\% & 100\% (5/5) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Paired t-test: $t = 1.043$, $p = 0.356$. This fails to reject the null
+of no difference between $d=3$ and $d=4$; note that with $n=5$ seeds per
+condition, absence of a significant difference is not evidence of
+equivalence, and this test alone does not establish robustness.
+
+%=============================================================================
+\subsection{Observer-Dimension Phase Diagram}\label{sec:phase_diagram}
+%=============================================================================
+
+To investigate the role of observer complexity, we varied the observer
+dimension $d \in \{2,3,4,5\}$ while keeping $N=6$, $D=6$, and
+$g_{XY}=0.8$ fixed. Each configuration was evaluated over five independent
+random seeds.
+
+\begin{table}[ht]
+\centering
+\caption{Phase diagram by observer dimension ($N=6$, $g_{XY}=0.8$)}
+\label{tab:phase_diagram}
+\begin{tabular}{cccccc}
+\toprule
+$d$ & Mean Ratio & Std Dev & CV (\%) & Alignment & Status \\
+\midrule
+2 & 4.81 & $\pm$0.46 & 9.5\% & 100\% (5/5) & Healthy \\
+3 & 4.82 & $\pm$0.24 & 5.0\% & 100\% (5/5) & Healthy \\
+4 & 4.60 & $\pm$0.28 & 6.0\% & 100\% (5/5) & Healthy \\
+5 & 4.62 & $\pm$0.16 & 3.4\% & 100\% (5/5) & Healthy \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Several features are noteworthy.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{No strict threshold at $d=3$:}
+Contrary to our initial expectation, even $d=2$ produces healthy temporal
+emergence with perfect alignment. This suggests that the minimum observer
+complexity required for temporalization is lower than anticipated.
+
+\item \textbf{No significant differences across $d$:}
+Mean ratios cluster in a narrow range ($4.6$--$4.8$) across all four tested
+observer dimensions, and alignment is perfect (100\%, 5/5 seeds) in every
+case. CV varies between $3.4\%$ and $9.5\%$ with no clear monotonic trend,
+and the paired comparison between $d=3$ and $d=4$ (Table~\ref{tab:stats})
+found no significant difference. We do not find evidence for an optimal or
+``sweet spot'' observer dimension in this range; within the resolution of
+five seeds per configuration, the mechanism appears robust to the choice of
+$d \in \{2,3,4,5\}$. (An earlier draft of this table, generated before the
+simulation pipeline was consolidated into \texttt{code/sgoed\_core.py}, had
+reported a spurious $d=4$ ``sweet spot'' and reduced $d=5$ alignment; those
+numbers could not be reproduced from the current codebase and have been
+replaced with freshly re-run, seed-logged values.)
+\end{enumerate}
+
+%=============================================================================
+\subsection{Finite-Size Scaling and Parameter Sensitivity}\label{sec:fss}
+%=============================================================================
+
+We next tested whether the observed temporal emergence is a finite-size
+artifact by varying the matrix size $N$. We first fixed $d=3$ and
+$g_{XY}=0.8$ and examined $N \in \{4,5,6,7,8\}$.
+
+\begin{table}[ht]
+\centering
+\caption{Finite-size scaling with fixed $g_{XY}=0.8$ ($d=3$)}
+\label{tab:fss_fixed}
+\begin{tabular}{cccccc}
+\toprule
+$N$ & Mean Ratio & Std Dev & CV (\%) & Alignment & Status \\
+\midrule
+4 & 4.87 & $\pm$0.63 & 12.9\% & 100\% (5/5) & Healthy \\
+5 & 4.90 & $\pm$0.44 & 9.0\%  & 100\% (5/5) & Healthy \\
+6 & 4.82 & $\pm$0.24 & 5.0\%  & 100\% (5/5) & Healthy \\
+7 & 1.83 & $\pm$0.42 & 23.0\% & 80\% (4/5)  & Weak \\
+8 & 1.70 & $\pm$0.50 & 29.4\% & 100\% (5/5) & Weak \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The data reveal two distinct regimes.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Small-$N$ regime ($N \leq 6$):}
+For $N=4,5,6$, the ratio remains stable near $R \approx 4.8$--$4.9$,
+with perfect alignment. This indicates that the mechanism is robust in
+the small-$N$ regime.
+
+\item \textbf{Crossover regime ($N \approx 7$):}
+At $N=7$, the ratio drops to $R \approx 1.83$ and the alignment rate falls
+to 80\%. This suggests the onset of a crossover where the fixed coupling
+$g_{XY}=0.8$ is no longer sufficient to produce strong temporalization.
+
+\item \textbf{Large-$N$ sensitivity ($N \geq 7$):}
+At $N=8$, emergence remains weak for fixed $g_{XY}=0.8$, despite perfect
+alignment. This indicates that the observer direction is still correctly
+selected, but the coupling strength is insufficient to amplify it into a
+strong temporal hierarchy.
+\end{enumerate}
+
+%=============================================================================
+\subsection{Parameter Tuning at $N=8$}\label{sec:n8_tuning}
+%=============================================================================
+
+To determine whether the weak emergence at $N=8$ represents a genuine
+breakdown or merely parameter sensitivity, we repeated the simulations at
+$N=8$ while varying $g_{XY}$.
+
+\begin{table}[ht]
+\centering
+\caption{Parameter tuning at $N=8$ ($d=3$)}
+\label{tab:n8_tuning}
+\begin{tabular}{cccccc}
+\toprule
+$g_{XY}$ & Mean Ratio & Std Dev & CV (\%) & Alignment & Status \\
+\midrule
+0.80 & 1.70 & $\pm$0.50 & 29.4\% & 100\% (5/5) & Weak \\
+1.05 & 5.72 & $\pm$3.37 & 59.0\% & 100\% (5/5) & High variance \\
+1.10 & 7.41 & $\pm$2.33 & 31.5\% & 100\% (5/5) & Healthy / preferred \\
+1.15 & 8.45 & $\pm$2.24 & 26.5\% & 100\% (5/5) & Near boundary \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These results show that the apparent failure at $N=8$ is not a genuine
+absence of the mechanism. Instead, $N=8$ requires stronger coupling to
+restore temporal emergence.
+
+The value $g_{XY}=1.10$ provides a useful compromise: it produces a healthy
+mean ratio $R \approx 7.41$, perfect alignment, and remains safely below the
+upper boundary $R=10$ on average. We therefore regard
+\[
+g_{XY}^{\mathrm{opt}}(N=8) \approx 1.10
+\]
+as the preferred working value in this parameter range.
+
+We note that CV is non-monotonic in $g_{XY}$ over the scanned range,
+peaking at $g_{XY}=1.05$ (CV $=59.0\%$) before falling again at
+$g_{XY}=1.10, 1.15$. The cause of this spike is unclear from the present
+data: with $n=5$ seeds at a single point, we cannot distinguish an
+ordinary sampling fluctuation from a genuine feature of the model near
+$g_{XY}=1.05$. We flag this as an open question (Section~\ref{sec:open_questions})
+rather than propose a mechanism for it.
+
+%=============================================================================
+\subsection{Two-Regime Scaling Picture}\label{sec:two_regime_scaling}
+%=============================================================================
+
+The combined finite-size and tuning data suggest a two-regime scaling
+structure.
+
+\begin{table}[ht]
+\centering
+\caption{Estimated optimal coupling by system size}
+\label{tab:gopt_scaling}
+\begin{tabular}{ccccc}
+\toprule
+$N$ & $g_{XY}^{\mathrm{opt}}$ & Mean Ratio & Alignment & Regime \\
+\midrule
+4 & 0.80 & 4.87 & 100\% & Small-$N$ \\
+5 & 0.80 & 4.90 & 100\% & Small-$N$ \\
+6 & 0.80 & 4.82 & 100\% & Small-$N$ \\
+7 & $>0.80$ & 1.83 at $g=0.8$ & 80\% & Crossover \\
+8 & $\approx 1.10$ & 7.41 & 100\% & Tuned large-$N$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For $N \leq 6$, the same coupling $g_{XY}=0.8$ produces stable temporal
+emergence. For $N \geq 7$, however, the system enters a regime where the
+coupling must be increased to maintain a strong temporal hierarchy.
+
+We caution that only two anchor values of $g_{XY}^{\mathrm{opt}}$ are
+available ($\approx 0.8$ for $N\le 6$, and $\approx 1.10$ at $N=8$, itself
+selected by eye from four scanned values rather than fit), so any
+``power-law exponent'' computed from them is a secant slope between two
+points, not an independent statistical estimate, and the two numbers below
+are not separate pieces of evidence but different pairings of the same two
+anchors. If one nonetheless assumes a power-law form
+\[
+g_{XY}^{\mathrm{opt}}(N) \propto N^\alpha,
+\]
+then using the range $N=6 \rightarrow 8$ gives
+\[
+\alpha
+= \frac{\ln(1.10/0.80)}{\ln(8/6)}
+\approx
+\frac{0.318}{0.288}
+\approx 1.10,
+\]
+while using the wider range $N=4 \rightarrow 8$ (which additionally assumes
+no change in $g_{XY}^{\mathrm{opt}}$ between $N=4$ and $N=6$) gives
+\[
+\alpha
+= \frac{\ln(1.10/0.80)}{\ln(8/4)}
+\approx
+\frac{0.318}{0.693}
+\approx 0.46.
+\]
+The factor-of-two spread between these two secant slopes is expected from
+their construction and should not be read as evidence against a power law;
+conversely, agreement between them would not have been evidence for one
+either, since both are computed from the same two data points. With only
+two anchors, the data cannot distinguish a power law from other
+monotonically increasing forms of $g_{XY}^{\mathrm{opt}}(N)$. Determining
+$\alpha$ (or ruling out a power law) would require $g_{XY}^{\mathrm{opt}}$
+at intermediate points such as $N=7$ and beyond $N=8$. We therefore report
+these numbers only as a preliminary, non-independent sensitivity check, not
+as a scaling-exponent measurement, and the data are more naturally read as
+evidence for a crossover near $N \approx 7$ between a small-$N$ regime,
+where no tuning is required, and a larger-$N$ regime, where $g_{XY}$ must
+increase with system size.
+
+%=============================================================================
+\subsection{Physical Interpretation of the Crossover}\label{sec:crossover_interpretation}
+%=============================================================================
+
+The observed crossover can be interpreted in several complementary ways.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Phase-space volume:}
+Each matrix contains $N^2$ real degrees of freedom before symmetry constraints.
+For $N=8$, there are $d \times N^2 = 3 \times 64 = 192$ independent
+matrix elements (for $d=3$). Thermal fluctuations at inverse temperature
+$\beta = 1$ compete with the coupling energy $\propto g_{XY}$. For fixed
+$g_{XY}$, larger $N$ means more fluctuations, requiring larger $g_{XY}$ to
+maintain the symmetry-broken phase.
+
+\item \textbf{Competition with IKKT term:}
+The IKKT commutator term scales as $\sim N^2$ in the large-$N$ limit. To
+overcome this and create a preferred direction, the coupling term must also
+scale appropriately, suggesting $g_{XY} \propto N^\alpha$ for some $\alpha > 0$.
+
+\item \textbf{Entropy argument:}
+The number of possible configurations grows exponentially with $N$. To select
+a specific temporal direction from this exponentially large space requires
+coupling energy that grows with system size.
+\end{enumerate}
+
+%=============================================================================
+\subsection{Connection to IKKT Matrix Model}
+
+This scaling behavior is reminiscent of the IKKT matrix
+model~\cite{kim_nishimura_2011, kim_nishimura_2019}. In the Lorentzian IKKT
+model, Kim and Nishimura found that spontaneous symmetry breaking
+SO(9) $\rightarrow$ SO(3) requires $N \geq 10$ for clear emergence of
+(3+1)-dimensional spacetime. While the coupling in their model is fixed by
+$g^2$, the large-$N$ limit requires careful extrapolation and shows
+sensitivity to initial conditions.
+
+Our model shows a similar sensitivity, but with an explicit scaling parameter
+$g_{XY}$ that must be tuned with $N$. This suggests that both spontaneous and
+observer-induced symmetry breaking face similar challenges in the large-$N$
+limit, namely the competition between coupling energy and phase space volume.
+
+%=============================================================================
+\section{Discussion}\label{sec:discussion}
+%=============================================================================
+
+\subsection{Advantages Over External Adapter}
+
+The dynamical observer approach offers several advantages:
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Physical Motivation:} Observer is dynamical system, not parameter.
+\item \textbf{Emergent Direction:} Temporal direction emerges from observer dynamics.
+\item \textbf{Robustness:} Works across $d = 2,3,4,5$ and multiple seeds.
+\item \textbf{Measurement Theory:} Observer as measurement device.
+\end{enumerate}
+
+\subsection{Relation to Philosophical Positions}
+
+Our model is consistent with several philosophical positions within the 
+restricted scope of our toy model:
+
+\begin{itemize}[leftmargin=*]
+\item \textbf{Leibniz (relational time):} Temporal direction created by observer.
+\item \textbf{Barbour (timeless physics):} Pre-observer state is symmetric.
+\item \textbf{Rovelli (thermal time):} Coupling creates preferred direction.
+\item \textbf{Relational QM:} States relative to observer.
+\end{itemize}
+
+\textbf{Important:} ``Consistent with'' does not mean ``proves'' or 
+``validates.'' These philosophical positions remain open questions.
+
+%=============================================================================
+\section{Open Questions and Future Directions}\label{sec:open_questions}
+%=============================================================================
+
+Our results raise several important questions that warrant further investigation:
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Precise Scaling Exponent:}
+Our preliminary estimate $\alpha \approx 0.46$--$1.10$ is based on limited
+data points. More systematic studies at intermediate system sizes
+($N=5, 7, 9, 10$) are needed to confirm the power-law scaling hypothesis
+and determine whether $\alpha$ is constant or varies with $N$.
+
+\item \textbf{Nature of the Crossover:}
+Is the crossover at $N \approx 7$ a sharp transition or a smooth crossover?
+Does it depend on observer dimension $d$? Would increasing $d$ at large $N$
+reduce the required coupling strength?
+
+\item \textbf{Large-$N$ Behavior:}
+The scaling behavior at $N > 8$ remains unexplored. Key questions include:
+Does the scaling $g_{XY}^{\text{opt}}(N) \propto N^\alpha$ persist? Is there
+a critical $N_c$ where the mechanism breaks down permanently? How does the
+continuum limit ($N \rightarrow \infty$) behave?
+
+\item \textbf{Sweet Spot Determination:}
+At $N=8$, the optimal coupling appears to be $g_{XY}^{\text{opt}} \approx 1.10$.
+Finer sampling in this range (e.g., $g_{XY} = 1.08, 1.12$) would identify
+the precise sweet spot where emergence is strongest with minimal variance.
+
+\item \textbf{Observer Complexity Scaling:}
+How does the optimal observer dimension $d^{\text{opt}}$ scale with $N$?
+Is there a relation $d^{\text{opt}}(N) \propto N^\beta$? Would larger $d$
+at large $N$ restore emergence without requiring stronger coupling?
+
+\item \textbf{Universality:}
+Would this mechanism work with different coupling structures or different
+matrix models (e.g., BFSS, Lorentzian IKKT)? How universal is the
+observer-induced temporalization phenomenon?
+
+\item \textbf{Connection to Quantum Gravity:}
+The finite-size scaling and crossover behavior may have analogs in emergent
+spacetime scenarios. Can this model be connected to holographic duality or
+other quantum gravity frameworks?
+
+\item \textbf{Renormalization Group Analysis:}
+The scaling behavior suggests the need for RG analysis to understand how
+$g_{XY}$ flows with scale. Such an analysis would determine whether the
+scaling is a physical feature of the continuum theory or an artifact of
+our phenomenological coupling.
+
+\item \textbf{Non-Monotonic Variance Near $g_{XY}=1.05$:}
+At $N=8$, the coefficient of variation peaks sharply at $g_{XY}=1.05$
+(CV $=59.0\%$) between lower values at $g_{XY}=0.80$ and higher values at
+$g_{XY}=1.10,1.15$ (Section~\ref{sec:n8_tuning}). Is this a reproducible
+feature of the model (e.g.\ proximity to a region of enhanced
+fluctuations) or an artifact of $n=5$ seeds at a single point? Denser
+sampling around $g_{XY}=1.05$ with more seeds would be needed to
+distinguish these possibilities.
+\end{enumerate}
+
+%=============================================================================
+\section{Conclusion}\label{sec:conclusion}
+%=============================================================================
+
+We have presented a toy-level computational demonstration of temporal 
+emergence from a dynamical observer. Our key findings:
+
+\begin{enumerate}[leftmargin=*]
+\item An observer system $Y$ can dynamically create the temporal direction 
+      in a main system $X$ through directional coupling.
+\item For coupling $g_{XY} \in [0.8, 1.2]$ and observer dimensions 
+      $d \in \{2, 3, 4, 5\}$, we observe healthy temporal emergence with 
+      ratios $1.8$--$8.5$.
+\item Perfect alignment ($X_{\max} = v_{\max}$) in healthy emergence cases 
+      confirms the observer's active role.
+\item Two-regime scaling: robust for $N \leq 6$, parameter tuning required 
+      for $N \geq 7$.
+\item A paired comparison between $d=3$ and $d=4$ found no significant
+      difference ($p = 0.356$), though with $n=5$ seeds per condition
+      this does not by itself establish robustness or equivalence.
+\end{enumerate}
+
+\textbf{Appropriate Interpretation:} These results demonstrate that 
+dynamical observer temporalization \textit{can be represented} in a 
+consistent mathematical framework. They do not prove that time emerges 
+from observer coupling in nature.
+
+\textbf{Final Statement:} This work is a toy-level demonstration of 
+mathematical consistency, not a discovery of physical laws. Following 
+the philosophy of our exploratory notes, we emphasize that this is a 
+\textbf{design framework demonstrating mathematical consistency}, 
+not empirical physics.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

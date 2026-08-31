@@ -1,0 +1,205 @@
+{
+  "feedback": {
+    "gYX=1.0": {
+      "ratio_mean": 4.576072467954224,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.5313619764339546,
+      "Y_max_extent": 1.7807843496336624,
+      "acceptance_rate": 0.594984126984127,
+      "ratio_std": 0.21372705654484234,
+      "per_seed_Ymax": [
+        0.604,
+        0.589,
+        0.69,
+        6.479,
+        0.542
+      ],
+      "n_hit_gate": 0
+    },
+    "gYX=1.1": {
+      "ratio_mean": 4.736272920721213,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.6708802372684675,
+      "Y_max_extent": 2.4439914967089815,
+      "acceptance_rate": 0.5826878306878307,
+      "ratio_std": 0.03633665280925862,
+      "per_seed_Ymax": [
+        0.668,
+        0.57,
+        0.642,
+        9.703,
+        0.638
+      ],
+      "n_hit_gate": 0
+    },
+    "gYX=1.2": {
+      "ratio_mean": 4.640579355151649,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.58991351630239,
+      "Y_max_extent": 5.84374858185672,
+      "acceptance_rate": 0.5665608465608465,
+      "ratio_std": 0.18138189428446252,
+      "per_seed_Ymax": [
+        8.435,
+        0.614,
+        0.646,
+        9.533,
+        9.991
+      ],
+      "n_hit_gate": 1
+    },
+    "gYX=1.3": {
+      "ratio_mean": 4.788219750175256,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.6936528141587734,
+      "Y_max_extent": 5.251625298370213,
+      "acceptance_rate": 0.5651005291005291,
+      "ratio_std": 0.16622909157919818,
+      "per_seed_Ymax": [
+        0.829,
+        9.827,
+        8.908,
+        6.053,
+        0.642
+      ],
+      "n_hit_gate": 0
+    },
+    "gYX=1.4": {
+      "ratio_mean": 4.769331268615233,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.685925377624805,
+      "Y_max_extent": 7.541213394092345,
+      "acceptance_rate": 0.5412486772486773,
+      "ratio_std": 0.2430518748263366,
+      "per_seed_Ymax": [
+        0.646,
+        9.973,
+        7.301,
+        9.986,
+        9.8
+      ],
+      "n_hit_gate": 2
+    },
+    "gYX=1.5": {
+      "ratio_mean": 4.861069146178107,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.704394720340615,
+      "Y_max_extent": 8.755816679933513,
+      "acceptance_rate": 0.5264761904761904,
+      "ratio_std": 0.08187478985809599,
+      "per_seed_Ymax": [
+        5.065,
+        9.998,
+        9.987,
+        9.994,
+        8.735
+      ],
+      "n_hit_gate": 3
+    },
+    "gYX=1.6": {
+      "ratio_mean": 4.661657994768973,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.648904920450311,
+      "Y_max_extent": 8.125083789824043,
+      "acceptance_rate": 0.5296296296296296,
+      "ratio_std": 0.20182115976565543,
+      "per_seed_Ymax": [
+        9.998,
+        9.999,
+        9.992,
+        9.986,
+        0.65
+      ],
+      "n_hit_gate": 4
+    },
+    "gYX=1.7": {
+      "ratio_mean": 4.632837366156527,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.603029925422996,
+      "Y_max_extent": 9.813058979271304,
+      "acceptance_rate": 0.5105185185185185,
+      "ratio_std": 0.45052338828512456,
+      "per_seed_Ymax": [
+        9.965,
+        9.997,
+        9.995,
+        9.997,
+        9.11
+      ],
+      "n_hit_gate": 4
+    },
+    "gYX=1.8": {
+      "ratio_mean": 4.560187678969501,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.511719391933409,
+      "Y_max_extent": 8.987268098280449,
+      "acceptance_rate": 0.5292698412698412,
+      "ratio_std": 0.2602381711342967,
+      "per_seed_Ymax": [
+        9.957,
+        5.068,
+        9.942,
+        9.997,
+        9.972
+      ],
+      "n_hit_gate": 4
+    },
+    "gYX=1.9": {
+      "ratio_mean": 4.691372087220897,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.623589273354198,
+      "Y_max_extent": 9.991426891584812,
+      "acceptance_rate": 0.5091428571428571,
+      "ratio_std": 0.1484774078779195,
+      "per_seed_Ymax": [
+        10.0,
+        9.997,
+        9.99,
+        9.999,
+        9.972
+      ],
+      "n_hit_gate": 5
+    },
+    "gYX=2.0": {
+      "ratio_mean": 4.648482289517668,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.641476984253998,
+      "Y_max_extent": 9.99688713387452,
+      "acceptance_rate": 0.5075132275132275,
+      "ratio_std": 0.09904799008249274,
+      "per_seed_Ymax": [
+        9.998,
+        9.998,
+        9.996,
+        9.995,
+        9.997
+      ],
+      "n_hit_gate": 5
+    }
+  },
+  "meta": {
+    "elapsed_sec": 266.74521565437317,
+    "D": 6,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "gYX_list": [
+      1.0,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5,
+      1.6,
+      1.7,
+      1.8,
+      1.9,
+      2.0
+    ],
+    "source": "code/sgoed_core_v7.py run_simulation, full recompute, trajectory mean"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "feedback": {
+    "N6_d3|gYX=0.0": {
+      "ratio_mean": 4.746043969393125,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.633552071521214,
+      "Y_max_extent": 0.5354860712407739,
+      "acceptance_rate": 0.5946878306878307,
+      "ratio_std": 0.16645717993874892
+    },
+    "N6_d3|gYX=0.1": {
+      "ratio_mean": 4.763289363266451,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.756512864795125,
+      "Y_max_extent": 0.5507112633170861,
+      "acceptance_rate": 0.5963597883597883,
+      "ratio_std": 0.2558404885007724
+    },
+    "N6_d3|gYX=0.3": {
+      "ratio_mean": 4.616441064108853,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.517261506658192,
+      "Y_max_extent": 0.5462762607742329,
+      "acceptance_rate": 0.6065185185185185,
+      "ratio_std": 0.22204957884274085
+    },
+    "N6_d3|gYX=0.5": {
+      "ratio_mean": 4.7053979550976415,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.605968123653961,
+      "Y_max_extent": 0.5884166663498728,
+      "acceptance_rate": 0.5987301587301587,
+      "ratio_std": 0.12460812466313258
+    },
+    "N6_d2|gYX=0.0": {
+      "ratio_mean": 4.8131918958840885,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.735314111588887,
+      "Y_max_extent": 0.5536360973549413,
+      "acceptance_rate": 0.5905,
+      "ratio_std": 0.22610419926751849
+    },
+    "N6_d2|gYX=0.5": {
+      "ratio_mean": 4.845875658185819,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.746723606612752,
+      "Y_max_extent": 0.5766720061615354,
+      "acceptance_rate": 0.5972857142857142,
+      "ratio_std": 0.14150473846070044
+    },
+    "N6_d5|gYX=0.0": {
+      "ratio_mean": 4.358569399178746,
+      "alignment_rate": 1.0,
+      "X_max_extent": 4.342565839113524,
+      "Y_max_extent": 0.5304203653621876,
+      "acceptance_rate": 0.6072900432900433,
+      "ratio_std": 0.1315492233107737
+    },
+    "N6_d5|gYX=0.5": {
+      "ratio_mean": 4.163798179238245,
+      "alignment_rate": 0.9800000000000001,
+      "X_max_extent": 4.139265365779323,
+      "Y_max_extent": 0.5383080093246555,
+      "acceptance_rate": 0.616987012987013,
+      "ratio_std": 0.6942837433757348
+    }
+  },
+  "meta": {
+    "elapsed_sec": 241.50983119010925,
+    "D": 6,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "source": "code/sgoed_core_v7.py run_simulation, full recompute, trajectory mean"
+  }
+}

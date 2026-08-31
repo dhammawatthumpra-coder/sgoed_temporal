@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper and Zenodo record."
+title: "SGOED — Temporal Emergence from Dynamical Observer Coupling: A Matrix Model for Observer-Dependent Symmetry Breaking (Preprint v6)"
+authors:
+  - family-names: "Chanpengpad"
+    given-names: "Sutipong"
+    affiliation: "Independent Researcher, Chiang Rai, Thailand"
+    orcid: "https://orcid.org/0009-0001-4069-8576"
+date-released: 2026-09-01
+version: "6.0.0"
+doi: 10.5281/zenodo.XXXXXXX
+url: "https://zenodo.org/record/XXXXXXX"
+license: CC-BY-4.0
+keywords:
+  - matrix models
+  - dynamical observer
+  - temporal emergence
+  - symmetry breaking
+  - eigenvalue condensation
+  - bistability
+  - toy model
+  - reproducible computational physics
