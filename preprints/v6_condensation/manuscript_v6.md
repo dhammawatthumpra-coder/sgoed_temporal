@@ -87,11 +87,12 @@ Version 6: Trajectory-Mean Analysis with Corrected Sampler
 ## 1. Introduction
 
 The nature of time has been debated by philosophers and physicists for
-centuries. The Structural Time Framework (STF) [1]
-proposes that time is not fundamental but emerges from
-observer-dependent ordering of pre-temporal states.
+centuries [1, 2, 3]. The
+Structural Time Framework (STF) [4] proposes that time is
+not fundamental but emerges from observer-dependent ordering of
+pre-temporal states.
 
-In our previous work [2], we presented a toy model
+In our previous work [5], we presented a toy model
 where temporal emergence was driven by an external adapter parameter
 $\kappa_2$. While successful, this approach had a fundamental
 limitation: the observer was represented as a parameter, not as a
@@ -151,7 +152,7 @@ the self-observation paradox analogous to Wigner's friend.
 
 ## 3. Computational Methodology
 
-We use Metropolis-Hastings sampling with:
+We use Metropolis-Hastings sampling [6] with:
 
 - Matrix size: $N \in \{4, 5, 6, 7, 8\}$, with a larger-$N$ extension to
   $N \in \{9, 10, 12, 14, 16\}$
@@ -463,7 +464,7 @@ coupling.
 ### 4.7 Connection to IKKT Matrix Model
 
 Our model shares the mechanism of directional symmetry breaking with the
-IKKT matrix model [3, 4], in which
+IKKT matrix model [7, 8], in which
 Kim and Nishimura found that spontaneous symmetry breaking SO(9)
 $\rightarrow$ SO(3) requires sufficiently large $N$ for clear emergence
 of (3+1)-dimensional spacetime. We note, however, that the corrected v6
@@ -500,11 +501,13 @@ restricted scope of our toy model:
 
 - **Leibniz (relational time):** Temporal direction created by observer.
 
-- **Barbour (timeless physics):** Pre-observer state is symmetric.
+- **Barbour (timeless physics) [2]:** Pre-observer state is
+  symmetric.
 
-- **Rovelli (thermal time):** Coupling creates preferred direction.
+- **Rovelli (thermal time) [9, 3]:**
+  Coupling creates preferred direction.
 
-- **Relational QM:** States relative to observer.
+- **Relational QM [10]:** States relative to observer.
 
 **Important:** "Consistent with" does not mean "proves" or "validates."
 These philosophical positions remain open questions.
@@ -623,10 +626,22 @@ empirical physics.
 
 ## References
 
-[1] Chanpengpad, Sutipong (2026). Structural Time Framework. *Zenodo*. [doi:10.5281/zenodo.21763905](https://doi.org/10.5281/zenodo.21763905)
+[1] Page, Don N. & Wootters, William K. (1983). Evolution without evolution: Dynamics described by stationary observables. *Physical Review D*, 27, 2885--2892. [doi:10.1103/PhysRevD.27.2885](https://doi.org/10.1103/PhysRevD.27.2885)
 
-[2] Chanpengpad, Sutipong (2026). SGOED: An Atemporal Matrix Formalism for Stability-Gated Crystallization and Aggregation (Phase 1-2). *Zenodo*. [doi:10.5281/zenodo.21786260](https://doi.org/10.5281/zenodo.21786260)
+[2] Barbour, Julian (1999). The End of Time. *Oxford University Press*.
 
-[3] Kim, Sang-Woo, Nishimura, Jun & Tsuchiya, Asato (2012). Expanding (3+1)-dimensional universe from a Lorentzian matrix model for superstring theory in (9+1) dimensions. *Physical Review Letters*, 108, 011601. [doi:10.1103/PhysRevLett.108.011601](https://doi.org/10.1103/PhysRevLett.108.011601)
+[3] Rovelli, Carlo (2018). The Order of Time. *Riverhead Books*.
 
-[4] Kim, Sang-Woo, Nishimura, Jun & Tsuchiya, Asato (2012). Late time behaviors of the expanding universe in the IIB matrix model. *Journal of High Energy Physics*, 2012, 147. [doi:10.1007/JHEP10(2012)147](https://doi.org/10.1007/JHEP10(2012)147)
+[4] Chanpengpad, Sutipong (2026). Structural Time Framework. *Zenodo*. [doi:10.5281/zenodo.21763905](https://doi.org/10.5281/zenodo.21763905)
+
+[5] Chanpengpad, Sutipong (2026). SGOED: An Atemporal Matrix Formalism for Stability-Gated Crystallization and Aggregation (Phase 1-2). *Zenodo*. [doi:10.5281/zenodo.21786260](https://doi.org/10.5281/zenodo.21786260)
+
+[6] Metropolis, Nicholas, Rosenbluth, Arianna W. & others (1953). Equation of state calculations by fast computing machines. *Journal of Chemical Physics*, 21, 1087--1092. [doi:10.1063/1.1699114](https://doi.org/10.1063/1.1699114)
+
+[7] Kim, Sang-Woo, Nishimura, Jun & Tsuchiya, Asato (2012). Expanding (3+1)-dimensional universe from a Lorentzian matrix model for superstring theory in (9+1) dimensions. *Physical Review Letters*, 108, 011601. [doi:10.1103/PhysRevLett.108.011601](https://doi.org/10.1103/PhysRevLett.108.011601)
+
+[8] Kim, Sang-Woo, Nishimura, Jun & Tsuchiya, Asato (2012). Late time behaviors of the expanding universe in the IIB matrix model. *Journal of High Energy Physics*, 2012, 147. [doi:10.1007/JHEP10(2012)147](https://doi.org/10.1007/JHEP10(2012)147)
+
+[9] Connes, Alain & Rovelli, Carlo (1994). Von Neumann algebra automorphisms and time-thermodynamics relation. *Classical and Quantum Gravity*, 11, 2899--2918. [doi:10.1088/0264-9381/11/12/007](https://doi.org/10.1088/0264-9381/11/12/007)
+
+[10] Rovelli, Carlo (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, 35, 1637--1678. [doi:10.1007/BF02302261](https://doi.org/10.1007/BF02302261)
