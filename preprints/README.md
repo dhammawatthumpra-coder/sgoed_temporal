@@ -1,8 +1,10 @@
 # SGOED — Preprints (Zenodo-ready)
 
-Two self-contained preprint folders, one per Zenodo release (each gets its
-own DOI). Each folder carries ONLY what is needed to read and reproduce its
-manuscript — the full live workspace remains in the repo root (`code/`, `matrix/`, …).
+This repository is **SGOED_temporal** — the time-emergent extension of the
+atemporal SGOED framework (preprints v6/v7). Two self-contained preprint
+folders, one per Zenodo release (each gets its own DOI). Each folder
+carries ONLY what is needed to read and reproduce its manuscript — the
+full live workspace remains in the repo root (`code/`, `matrix/`, …).
 
 | Folder | Manuscript | Content |
 |---|---|---|
