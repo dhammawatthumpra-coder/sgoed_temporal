@@ -51,12 +51,13 @@ label{abstract}
 We ask a focused question in a toy universe of coupled
 matrix/graph/causal-set models: can the arrow of time arise from the
 \emph{final equilibrium state} of a relational structure, however it is
-coupled? Using a disciplined audit (reproduce, significance with
-\(\ge 10\) seeds, null test, labeling test, thermalization check,
-mechanism), we demonstrate that it cannot: \textbf{eleven structural
-observables} (asymmetry ratio, sign counts, Myrheim--Meyer dimension,
-spectral dimension, cycle ratio, time-reversal, order statistics,
-eigenvalue repulsion, entropy rate, \ldots) are all time-symmetric or
+coupled? Using a disciplined audit (reproduce, significance, null test,
+labeling test, thermalization check, mechanism --- seed counts stated
+per result, \(\ge 10\) wherever per-seed scatter is non-trivial), we
+demonstrate that it cannot: \textbf{eleven structural observables}
+(asymmetry ratio, sign counts, Myrheim--Meyer dimension, spectral
+dimension, cycle ratio, time-reversal, order statistics, eigenvalue
+repulsion, entropy rate, \ldots) are all time-symmetric or
 null-compatible at equilibrium Monte Carlo. In contrast, three
 \emph{process-based} constructions produce robust directional time:
 
@@ -185,9 +186,10 @@ aligned with \(\hat v\) to large extent \(\mathrm{Tr}(X_\mu^2)/N\) --- a
 \emph{discrete} winner-take-all choice among \(D\) dimensions
 (condensation ratio \(\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23\),
 \(\sim 60\sigma\) over baseline {[}\cite{chanpengpad_sgoed_v2}{]}), with
-first-order bistability/hysteresis. This mechanism is the reproducible
-core of the project; it picks \emph{a} direction but does not create
-\emph{flow}.
+first-order bistability/hysteresis (audited scripts
+\texttt{AUDIT\_v7\_hysteresis*} in \texttt{audit\_evidence/}; see also
+the v6 preprint). This mechanism is the reproducible core of the
+project; it picks \emph{a} direction but does not create \emph{flow}.
 
 \subsection{2 Growth, transport, and
 posets}\label{growth-transport-and-posets}
@@ -273,6 +275,19 @@ is sufficient (this gate alone reversed two conclusions in this project
 measured evidence \\
 \end{longtable}
 }
+
+\emph{Seed-count note.} The table's ``\(\ge 10\) seeds'' criterion
+applies to observables whose per-seed scatter is non-trivial (every
+dimension estimate and every null/labeling control here used
+\(10\)--\(12\) seeds). The three deterministic routes report fewer seeds
+\emph{because their scatter is negligible by construction}: sequential
+growth inherits the past mean deterministically (origin alignment
+\(0.9995\pm0.0002\) std over 6 seeds, chain \(0.9991\pm0.0002\)), and
+the upwind transport current is \(J=+5.773\pm0.016\) over 8 seeds
+(\(\sim0.3\%\)). For such nearly-deterministic observables, additional
+seeds only confirm the mean; we state the actual counts per result in
+Appendix \hyperref[appendix-a-reproducibility]{A} rather than claiming a
+uniform \(10\).
 
 Appendix \hyperref[appendix-b-trap-catalog]{B} lists the concrete
 failure modes this process caught.
@@ -440,7 +455,7 @@ floor.
 breaking}\label{the-4d-question-matrix-spontaneous-symmetry-breaking}
 
 Motivated by the Lorentzian IKKT programs {[}\cite{kim_nishimura_2011},
-\cite{kim_nishimura_2019}, \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}{]}, we asked whether the
+\cite{kim_nishimura_2012}, \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}{]}, we asked whether the
 matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
 (and \(1{+}9\) at \(D=10\)) \emph{without} the engineered steering
 \(\hat v\). All four probes were audited at \(\ge 10\) seeds:
@@ -469,7 +484,7 @@ matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
   (\(2000\)--\(8700\)) with no equilibrium (drift \(0.13\)--\(0.15\)).
   This mirrors the known fact that Lorentzian IKKT requires the fermion
   determinant as regulator {[}\cite{kim_nishimura_2011},
-  \cite{kim_nishimura_2019}{]}; a CPU toy without it has no controlled
+  \cite{kim_nishimura_2012}{]}; a CPU toy without it has no controlled
   configuration space.
 \item
   \textbf{Bounded (saturating) noncommutativity}
@@ -657,7 +672,7 @@ seeds; the light-cone law's dimension parameterization was not optimized
 beyond the scans shown; no fermion-like term was ever included; the
 ``3'' of the physical dimensional reduction remains unexplained by any
 toy here (it requires the phase/fermionic machinery of the Lorentzian
-programs {[}\cite{kim_nishimura_2011}, \cite{kim_nishimura_2019}{]}).
+programs {[}\cite{kim_nishimura_2011}, \cite{kim_nishimura_2012}{]}).
 
 \textbf{What an emergent theory would need (candidate directions).} A
 regulated (bounded) noncommutativity that \emph{prefers} a subset of
@@ -723,7 +738,10 @@ Key parameters:
   gates as reusable functions, with a self-test that demonstrates each
   trap class. The negative-evidence slice behind Sections 3/4.1/Appendix
   B ships in \texttt{audit\_evidence/} (v8--v14 cores, audit scripts,
-  results) and \texttt{notes/SGOED\_v8..v14\_notes.md}.
+  results) and \texttt{notes/SGOED\_v8..v14\_notes.md}. The
+  bistability/hysteresis claim of Section 2.1 is backed by
+  \texttt{audit\_evidence/code/AUDIT\_v7\_hysteresis.py} + its result
+  JSON.
 \end{itemize}
 
 Seeds: \(\{42,\dots,53\}\) ($\geq$10 for fine grids; $\geq$6 elsewhere, as

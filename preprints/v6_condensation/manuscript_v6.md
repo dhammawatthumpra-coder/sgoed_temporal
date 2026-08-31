@@ -19,7 +19,6 @@ observer-dependent ordering of pre-temporal states. We present a
 computational demonstration using a matrix model where an explicit
 observer system $Y$ dynamically creates the temporal direction in the
 main system $X$, without any external parameters.
-
 Our model employs a directional coupling mechanism where the observer
 generates a direction vector $v$ from its matrix traces, and
 dimensions of $X$ aligned with $v$ receive a temporal expansion term
@@ -29,20 +28,18 @@ over the measurement window (30 recorded sweeps) rather than read from
 a single final configuration. Monte Carlo simulations with statistical
 analysis (5 seeds per configuration, with a $30$-seed follow-up for
 the observer-dimension study) show:
-
-1.  Temporal emergence occurs robustly for observer dimensions
-    $d \in \{2,3,4,5\}$ and system sizes $N \in \{4,5,\ldots,16\}$,
-    with mean ratios clustering in $4.4$--$4.8$ and alignment at
-    $100\%$ in every configuration.
-
+1.  Temporal emergence occurs robustly in two one-dimensional scans
+    --- observer dimensions $d \in \{2,3,4,5\}$ at fixed $N=6$, and
+    system sizes $N \in \{4,5,\ldots,16\}$ at fixed $d=3$ --- with
+    mean ratios clustering in $4.4$--$4.8$ and alignment at $100\%$ in
+    every configuration. (Pairs such as $d=5,N=16$ were not scanned
+    together.)
 2.  No crossover or two-regime scaling is observed: emergence remains
     healthy across the entire tested range of $N$ up to $N=16$, with
     no threshold at which fixed coupling $g_{XY}=0.8$ fails to
     temporalize the system.
-
 3.  Perfect alignment between the temporal direction $X_{\max}$ and
     observer direction $v_{\max}$ in all healthy emergence cases.
-
 4.  A follow-up with $n=30$ seeds per condition shows a weak but
     detectable monotonic decrease of the mean ratio with observer
     dimension (slope $\approx -0.08$ per unit $d$, $p=0.003$,
@@ -50,26 +47,11 @@ the observer-dimension study) show:
     $d=4$ is not significant at this sample size ($t=0.52$, $p=0.61$).
     The earlier $n=5$ result ($p=0.049$) was a small-sample
     fluctuation.
-
 **Important Caveats:** This work represents a toy-level mathematical
 exploration using small matrix sizes ($N \leq 16$). Results
 demonstrate mathematical consistency, not physical reality.
-
 **Keywords:** dynamical observer, temporal emergence, matrix models,
 symmetry breaking, computational demonstration
-author:
-- |
-Sutipong Chanpengpad\
-Independent Researcher, Chiang Rai, Thailand\
-`dhammawatthumpra@gmail.com`\
-[ORCID: 0009-0001-4069-8576](https://orcid.org/0009-0001-4069-8576)
-bibliography:
-- references.bib
-date: 2026-09-01
-title: |
-**Temporal Emergence from Dynamical Observer Coupling:\
-A Matrix Model for Observer-Dependent Symmetry Breaking**\
-Version 6: Trajectory-Mean Analysis with Corrected Sampler
 
 ---
 

@@ -12,7 +12,7 @@ ORCID: [0009-0001-4069-8576](https://orcid.org/0009-0001-4069-8576)
 
 ## Abstract
 
-We ask a focused question in a toy universe of coupled matrix/graph/causal-set models: can the arrow of time arise from the *final equilibrium state* of a relational structure, however it is coupled? Using a disciplined audit (reproduce, significance with $\ge 10$ seeds, null test, labeling test, thermalization check, mechanism), we demonstrate that it cannot: **eleven structural observables** (asymmetry ratio, sign counts, Myrheim–Meyer dimension, spectral dimension, cycle ratio, time-reversal, order statistics, eigenvalue repulsion, entropy rate, …) are all time-symmetric or null-compatible at equilibrium Monte Carlo. In contrast, three *process-based* constructions produce robust directional time:
+We ask a focused question in a toy universe of coupled matrix/graph/causal-set models: can the arrow of time arise from the *final equilibrium state* of a relational structure, however it is coupled? Using a disciplined audit (reproduce, significance, null test, labeling test, thermalization check, mechanism — seed counts stated per result, $\ge 10$ wherever per-seed scatter is non-trivial), we demonstrate that it cannot: **eleven structural observables** (asymmetry ratio, sign counts, Myrheim–Meyer dimension, spectral dimension, cycle ratio, time-reversal, order statistics, eigenvalue repulsion, entropy rate, …) are all time-symmetric or null-compatible at equilibrium Monte Carlo. In contrast, three *process-based* constructions produce robust directional time:
 
 1. **Past Hypothesis** — a low-entropy (rank-1) initial state relaxes with $dS/S_0 = 0.98$, roughly $100\times$ the relaxation of a random initial state.
 2. **Sequential growth** (Rideout–Sorkin style) — birth order with frozen past yields chain inheritance $1.000\pm0.000$, deterministic and scale-free ($M=16,32$); the mechanism is a contraction map induced by alignment to the past-mean direction (prefix-sum coupling).
@@ -74,7 +74,7 @@ A unit holds real symmetric matrices $X = (X^1,\dots,X^D)$ of size $N\times N$ (
 
 $$S = \sum_{\mu<\nu}\mathrm{Tr}([X_\mu,X_\nu][X_\mu,X_\nu]^T) + \sum_\mu \lambda\big(\mathrm{Tr}(X_\mu^2)-Nr_0^2\big)^2 \ -\ g_{XY}\sum_\mu \hat v_\mu^2\,\mathrm{Tr}(X_\mu^4),$$
 
-where $\hat v = \mathrm{normalize}(\mathrm{Tr}(Y^1),\dots,\mathrm{Tr}(Y^d))$ is the observer direction. The coupling $-\hat v_\mu^2\mathrm{Tr}(X_\mu^4)$ drives exactly the dimension(s) aligned with $\hat v$ to large extent $\mathrm{Tr}(X_\mu^2)/N$ — a *discrete* winner-take-all choice among $D$ dimensions (condensation ratio $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23$, $\sim 60\sigma$ over baseline [[7](#ref-7)]), with first-order bistability/hysteresis. This mechanism is the reproducible core of the project; it picks *a* direction but does not create *flow*.
+where $\hat v = \mathrm{normalize}(\mathrm{Tr}(Y^1),\dots,\mathrm{Tr}(Y^d))$ is the observer direction. The coupling $-\hat v_\mu^2\mathrm{Tr}(X_\mu^4)$ drives exactly the dimension(s) aligned with $\hat v$ to large extent $\mathrm{Tr}(X_\mu^2)/N$ — a *discrete* winner-take-all choice among $D$ dimensions (condensation ratio $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23$, $\sim 60\sigma$ over baseline [[7](#ref-7)]), with first-order bistability/hysteresis (audited scripts `AUDIT_v7_hysteresis*` in `audit_evidence/`; see also the v6 preprint). This mechanism is the reproducible core of the project; it picks *a* direction but does not create *flow*.
 
 ### 2.2 Growth, transport, and posets
 
@@ -102,6 +102,8 @@ Every observable in this project is passed through six gates before being report
 | 4. Labeling/permutation | the metric is invariant under relabeling of nodes |
 | 5. Thermalization | the observable plateaus once $n_{\mathrm{therm}}$ is sufficient (this gate alone reversed two conclusions in this project — Section [4.3](#43-route-2-sequential-growth-and-its-mechanism), [4.2](#42-route-1-past-hypothesis)) |
 | 6. Mechanism | a stated explanation of *why*, backed by the measured evidence |
+
+*Seed-count note.* The table's "$\ge 10$ seeds" criterion applies to observables whose per-seed scatter is non-trivial (every dimension estimate and every null/labeling control here used $10$–$12$ seeds). The three deterministic routes report fewer seeds *because their scatter is negligible by construction*: sequential growth inherits the past mean deterministically (origin alignment $0.9995\pm0.0002$ std over 6 seeds, chain $0.9991\pm0.0002$), and the upwind transport current is $J=+5.773\pm0.016$ over 8 seeds ($\sim0.3\%$). For such nearly-deterministic observables, additional seeds only confirm the mean; we state the actual counts per result in Appendix [A](#appendix-a-reproducibility) rather than claiming a uniform $10$.
 
 Appendix [B](#appendix-b-trap-catalog) lists the concrete failure modes this process caught.
 
@@ -243,7 +245,7 @@ All scripts run on CPU with fixed seeds; results JSONs saved alongside. Key para
 - 4D probes: `sgoed_matrix_v15.py`, `step_v15_dynamical.py`, `step_v15_bounded.py`.
 - Causal sets: `step_causal_set_dmm.py`, `step_causal_set_scale_study.py` (bitset transitive closure; per-$N$ calibration), `step_growth_lightcone.py`, `step_lightcone_followup.py`.
 - Spectral dimension: `step_spectral_dimension_flow.py` (lazy walk).
-- Audit toolbox (Supplement A): `code/audit_gates.py` — six gates as reusable functions, with a self-test that demonstrates each trap class. The negative-evidence slice behind Sections 3/4.1/Appendix B ships in `audit_evidence/` (v8–v14 cores, audit scripts, results) and `notes/SGOED_v8..v14_notes.md`.
+- Audit toolbox (Supplement A): `code/audit_gates.py` — six gates as reusable functions, with a self-test that demonstrates each trap class. The negative-evidence slice behind Sections 3/4.1/Appendix B ships in `audit_evidence/` (v8–v14 cores, audit scripts, results) and `notes/SGOED_v8..v14_notes.md`. The bistability/hysteresis claim of Section 2.1 is backed by `audit_evidence/code/AUDIT_v7_hysteresis.py` + its result JSON.
 
 Seeds: $\{42,\dots,53\}$ (≥10 for fine grids; ≥6 elsewhere, as reported). Detailed reproducibility notes and the full results chain (updates 1–12) in `matrix/SGOED_TIME_EMERGENCE_SUMMARY.md`; project context in `SGOED_PROJECT_SUMMARY.md`.
 
@@ -278,7 +280,7 @@ The transferable lesson of the whole quest: **a metric is a hypothesis about an 
 
 <a id="ref-6"></a>[6] Chanpengpad, S. (2026). *Structural Time Framework*. Zenodo.
 
-<a id="ref-7"></a>[7] Chanpengpad, S. (2026). *SGOED: An Atemporal Matrix Formalism (Phases 1–6, manuscript_v6)*. Zenodo.
+<a id="ref-7"></a>[7] Chanpengpad, S. (2026). *SGOED: An Atemporal Matrix Formalism for Stability-Gated Crystallization and Aggregation (Phase 1–2)*. Zenodo. [doi:10.5281/zenodo.21786260](https://doi.org/10.5281/zenodo.21786260)
 
 <a id="ref-8"></a>[8] Metropolis, N., et al. (1953). Equation of state calculations by fast computing machines. *Journal of Chemical Physics*, 21(6), 1087–1092.
 

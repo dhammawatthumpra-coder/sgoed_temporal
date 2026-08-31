@@ -7,9 +7,17 @@ std = open("_v6_standalone.md", encoding="utf-8").read()      # for YAML abstrac
 tex = open("manuscript_v6.tex", encoding="utf-8").read()
 bib = open("references.bib", encoding="utf-8").read()
 
-# ---- 1. abstract from YAML (dedent) ----
-abstract = std.split("abstract: |", 1)[1].split("\n---", 1)[0]
-abstract = "\n".join(line[2:] if line.startswith("  ") else line for line in abstract.splitlines()).strip()
+# ---- 1. abstract from YAML (stop at the first unindented field) ----
+suffix = std.split("abstract: |", 1)[1]
+_lines = []
+for line in suffix.splitlines():
+    if line.startswith("  "):
+        _lines.append(line[2:])
+    elif not line.strip():
+        continue                 # blank line inside the block scalar
+    else:
+        break                    # first unindented YAML field ends the block
+abstract = "\n".join(_lines).strip()
 
 # ---- 2. strip pandoc heading ids, renumber headings ----
 body = re.sub(r"\s*\{#sec:[^}]*\}", "", body)

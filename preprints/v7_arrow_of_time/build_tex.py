@@ -44,7 +44,7 @@ BODY = BODY.replace("\\hyperref[43-route-2-sequential-growth-and-its-mechanism]"
 
 # --- 6. reference hyperlinks -> \cite{} ---
 KEYS = {1: "page_wootters_1983", 2: "connes_rovelli_1994", 3: "kim_nishimura_2011",
-        4: "kim_nishimura_2019", 5: "rovelli_rqm_1996", 6: "chanpengpad_stf",
+        4: "kim_nishimura_2012", 5: "rovelli_rqm_1996", 6: "chanpengpad_stf",
         7: "chanpengpad_sgoed_v2", 8: "metropolis_1953", 9: "barbour_1999",
         10: "rovelli_2018", 11: "rideout_sorkin_2000", 12: "sorkin_2005",
         13: "myrhem_1978", 14: "ambjorn_jurkiewicz_loll_2005",
