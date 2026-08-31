@@ -71,7 +71,7 @@ def run_v12_full_battery():
             f"Net D: {avg_d:+6.1f} (Null: {avg_shuf_d:+5.1f}) | Align: {avg_align*100:5.1f}%"
         )
 
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v12_full_battery_results.json"
+    out_file = "audit_v12_full_battery_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\n[Done] Saved full v12 battery audit to: {out_file}")

@@ -70,6 +70,6 @@ for gt in [0.8, 1.2, 1.6]:
                               "E": Emx.tolist()}
 out["D_scan"] = scan
 
-with open(r"F:\_Ai\sgoed\sgoed\matrix\step_transport_robust_results.json", "w") as f:
+with open("step_transport_robust_results.json", "w") as f:
     json.dump(out, f, indent=2)
 print("\nsaved -> step_transport_robust_results.json")

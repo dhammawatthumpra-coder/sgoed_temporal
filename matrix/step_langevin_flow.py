@@ -10,7 +10,7 @@ Measure: extent gradient E(0) > E(1) > ... (flow direction) + v_hat alignment.
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
+sys.path.insert(0, "../code")
 from sgoed_matrix_ecosystem_v14 import action_v14
 from sgoed_core_v7 import _compute_v_hat
 

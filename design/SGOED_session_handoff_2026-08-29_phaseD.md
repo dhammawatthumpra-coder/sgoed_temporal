@@ -1,7 +1,7 @@
 
 
 ## Replication protocol recovery — 2026-08-29
-- Local provenance search was performed across `F:\_Ai\sgoed\sgoed` and the wider `F:\_Ai\sgoed` tree for executable definitions of `A_init`, `area_excess`, and `decay_len`.
+- Local provenance search was performed across the repo root and the wider `F:\_Ai\sgoed` tree for executable definitions of `A_init`, `area_excess`, and `decay_len`.
 - No source definition of `A_init` or `decay_len` was found in the local code/data/design artifacts. The terms currently occur only as protocol/checkpoint terminology in the handoff.
 - Therefore the pilot-derived compound criterion (`argmax t={0,1}`, `decay_len >= 4`, `A_init > 2.0`) is **not yet executable from local provenance** and must not be reconstructed by inference.
 - No new seeds are to be run until the exact prior definitions of `A_init` and `decay_len` are recovered or explicitly re-derived and recorded as a new protocol decision.
@@ -9,7 +9,7 @@
 
 ## Definition-recovery audit — 2026-08-29 12:31:28 +07:00
 - Wider recursive search across `F:\_Ai\sgoed` found no local source definition of `A_init` or `decay_len`. Exact-token and broader decay-pattern searches returned only the present handoff references; no prior executable definition was recovered.
-- `F:\_Ai\sgoed\sgoed` is **not a Git working tree** (`git -C F:\_Ai\sgoed\sgoed log --all ...` returns `fatal: not a git repository`). Therefore there is no V5-local Git history to mine for these definitions. The only Git repository found in the wider tree is `preprint\record_B_sgoed_code`, which is a separate repository and was not treated as provenance for the V5 Phase-D protocol.
+- the repo root is **not a Git working tree** (`git -C <repo-root> log --all ...` returns `fatal: not a git repository`). Therefore there is no V5-local Git history to mine for these definitions. The only Git repository found in the wider tree is `preprint\record_B_sgoed_code`, which is a separate repository and was not treated as provenance for the V5 Phase-D protocol.
 - No seed 47–66 data have been inspected or generated in this session before this protocol decision.
 
 ## Estimand definition (pre-registered 2026-08-29 12:31:28 +07:00)

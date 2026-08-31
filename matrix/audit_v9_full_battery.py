@@ -103,7 +103,7 @@ def run_v9_full_battery():
         "scaling_and_dimension": scale_results,
         "feedback_and_bistability": feedback_results,
     }
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v9_full_battery_results.json"
+    out_file = "audit_v9_full_battery_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(full_data, f, indent=2)
     print(f"\n[Done] Saved full v9 battery audit to: {out_file}")

@@ -19,7 +19,7 @@ condition), chain inheritance, determinism.
 """
 import sys
 import numpy as np
-sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
+sys.path.insert(0, "../code")
 from sgoed_core_v7 import action_v7, _compute_v_hat
 
 
@@ -153,6 +153,6 @@ if __name__ == "__main__":
               f"chain={np.mean(chs):.4f}±{np.std(chs):.4f}")
         out[tag] = {"align_origin": [float(np.mean(a0s)), float(np.std(a0s))],
                     "chain": [float(np.mean(chs)), float(np.std(chs))]}
-    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_past_hypothesis_results.json", "w") as f:
+    with open("step_growth_past_hypothesis_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_past_hypothesis_results.json")

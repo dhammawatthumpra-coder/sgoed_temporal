@@ -11,7 +11,7 @@ Expect: E decreases monotonically 0 -> M-1 (time flowing downhill) + aligned.
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
+sys.path.insert(0, "../code")
 from sgoed_matrix_ecosystem_v14 import action_v14
 from sgoed_core_v7 import action_v7, _compute_v_hat
 

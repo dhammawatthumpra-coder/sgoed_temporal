@@ -1,7 +1,7 @@
 # Handoff — SGOED V5: Quest "Emergent Time" (Arrow of Time)
 
 **วันที่:** 2026-08-31 · **ภาษา:** ต้องตอบเป็นภาษาไทยเท่านั้น (ตาม AGENTS.md)
-**งานทั้งหมดอยู่ที่:** `F:\_Ai\sgoed\sgoed\` และ `F:\_Ai\sgoed\sgoed\matrix\`
+**งานทั้งหมดอยู่ที่:** `code/`, `matrix/`, `preprints/` ของ repo นี้
 
 ---
 

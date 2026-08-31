@@ -65,7 +65,7 @@ def run_dimension_audit():
             f"Dimension d_MM: {avg_d_mm:.2f}D | Proper Time (L_max): {avg_l_max:.1f}"
         )
 
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v3_dimensions_results.json"
+    out_file = "audit_v3_dimensions_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
     print(f"\n[Done] Saved complete dimension audit to: {out_file}")

@@ -66,7 +66,7 @@ def run_hysteresis_audit():
     elapsed = time.time() - t0
     print(f"\nCompleted scan in {elapsed:.2f} seconds ({elapsed/len(g_yx_values):.2f}s per point).")
 
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v3_hysteresis_results.json"
+    out_file = "audit_v3_hysteresis_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"[Done] Saved hysteresis audit to: {out_file}")

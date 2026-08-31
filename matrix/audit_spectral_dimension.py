@@ -180,7 +180,7 @@ def run_advanced_dimension_audit():
             f"R_hyper: {avg_r:.4f} | L_max: {avg_lmax:.1f}"
         )
 
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_spectral_dimension_results.json"
+    out_file = "audit_spectral_dimension_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\n[Done] Saved advanced dimension audit to: {out_file}")

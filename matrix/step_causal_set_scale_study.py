@@ -150,6 +150,6 @@ if __name__ == "__main__":
         print(line)
     out["verdict"] = verdict
 
-    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_causal_set_scale_results.json", "w") as f:
+    with open("step_causal_set_scale_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_causal_set_scale_results.json")

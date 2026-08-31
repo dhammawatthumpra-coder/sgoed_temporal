@@ -77,7 +77,7 @@ def run_benchmark():
             )
 
     # Save benchmark report
-    out_file = r"F:\_Ai\sgoed\sgoed\matrix\benchmark_v1_vs_v2_results.json"
+    out_file = "benchmark_v1_vs_v2_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
     print(f"\n[Done] Saved benchmark report to: {out_file}")

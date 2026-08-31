@@ -20,7 +20,7 @@ import sys
 import numpy as np
 from numba import njit
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
+sys.path.insert(0, "../code")
 from step_causal_set_scale_study import calibration, read_dim
 from step_sequential_growth import sequential_growth
 from sgoed_core_v7 import _compute_v_hat
@@ -162,6 +162,6 @@ if __name__ == "__main__":
         out[f"R_x{f}"] = {"d": {str(N): rows[str(N)] for N in Ns},
                           "std_across_N": std_acr, "verdict": verdict}
 
-    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_commutator_results.json", "w") as f:
+    with open("step_growth_commutator_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_commutator_results.json")

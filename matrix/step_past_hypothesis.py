@@ -9,7 +9,7 @@ Measure relaxation S(t): half-life, total dS, and how "long" the flow of time is
 """
 import sys
 import numpy as np
-sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
+sys.path.insert(0, "../code")
 from sgoed_core_v7 import action_v7
 
 

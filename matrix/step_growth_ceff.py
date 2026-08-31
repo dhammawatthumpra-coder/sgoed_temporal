@@ -136,6 +136,6 @@ if __name__ == "__main__":
     print("\nB2 (density-normalized): c_eff = c0*exp(-kappa*(dens_n-1))")
     for ka in [0.5, 2.0]:
         out[f"B2_kappa{ka}"] = audit(f"B2 kappa={ka}", "B2", ka, c0=0.15)
-    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_ceff_results.json", "w") as f:
+    with open("step_growth_ceff_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_ceff_results.json")
