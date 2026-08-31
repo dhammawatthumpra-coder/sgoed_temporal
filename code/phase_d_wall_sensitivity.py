@@ -1,6 +1,6 @@
 ﻿import sys, json, time
 import numpy as np
-sys.path.insert(0, r'F:\_Ai\sgoed\V5\code')
+sys.path.insert(0, r'F:\_Ai\sgoed\sgoed\code')
 from sgoed_core_v6 import run_simulation
 
 seeds=[42,43,44,45,46]
@@ -25,6 +25,6 @@ for cfg in configs:
         mean=np.mean([x['ratio_mean'] for x in rows]); sd=np.std([x['ratio_mean'] for x in rows],ddof=1)
         all_results.append({'config':cfg,'max_extent':wall,'seed_results':rows,'seed_mean':float(mean),'seed_sd':float(sd)})
 
-out=r'F:\_Ai\sgoed\V5\data\phase_d_wall_sensitivity.json'
+out=r'F:\_Ai\sgoed\sgoed\data\phase_d_wall_sensitivity.json'
 with open(out,'w') as f: json.dump(all_results,f,indent=2)
 print('\nSAVED',out)

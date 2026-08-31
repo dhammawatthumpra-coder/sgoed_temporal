@@ -4,7 +4,7 @@
 **ผู้เขียน:** Sutipong Chanpengpad & Antigravity AI  
 **วันที่:** 30 สิงหาคม 2026  
 **สถานะ:** เอกสารแผนแม่บทและการออกแบบสถาปัตยกรรม (Master Plan & Design Specification)  
-**ตำแหน่งไฟล์:** `F:\_Ai\sgoed\V5\matrix\SGOED_RELATIONAL_PLAN.md`
+**ตำแหน่งไฟล์:** `F:\_Ai\sgoed\sgoed\matrix\SGOED_RELATIONAL_PLAN.md`
 
 ---
 
@@ -124,9 +124,9 @@ graph TD
 
 ---
 
-## 🛠️ 6. แผนการสร้างโค้ดชุดแรก (Action Plan for `F:\_Ai\sgoed\V5\matrix\`)
+## 🛠️ 6. แผนการสร้างโค้ดชุดแรก (Action Plan for `F:\_Ai\sgoed\sgoed\matrix\`)
 
-เราจะเริ่มต้นสร้างโมดูลหลักในโฟลเดอร์ `F:\_Ai\sgoed\V5\matrix\` ดังนี้:
+เราจะเริ่มต้นสร้างโมดูลหลักในโฟลเดอร์ `F:\_Ai\sgoed\sgoed\matrix\` ดังนี้:
 
 1. **`sgoed_graph_core.py`**: แกนประมวลผล Graph Engine พร้อม Fast Local Metropolis Delta Update ($O(1)$ ต่อ edge)
 2. **`test_graph_action_delta.py`**: ทดสอบความแม่นยำของ Energy Delta เทียบกับ Full Action Recomputation ให้ได้ Machine Precision ($< 10^{-9}$)

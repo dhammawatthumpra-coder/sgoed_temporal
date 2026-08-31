@@ -107,7 +107,7 @@ construction — inheritance และ transport ทิศเดียว — **
 **หมายเหตุ:** manuscript_v6 (matrix v7+condensation) มีอยู่แล้ว — ร่างนี้ต่อยอด
 เป็น "part 2: time-arrow และ負 results" หรือผสานเป็น论文เดียว
 
-## 7. ไฟล์อ้างอิง (ทั้งหมดใน V5/)
+## 7. ไฟล์อ้างอิง (ทั้งหมดใน )
 
 - `matrix/SGOED_TIME_EMERGENCE_SUMMARY.md` — ผล + อัปเดต 1–8 (หลัก)
 - `SGOED_PROJECT_SUMMARY.md` — โครงการ v6–v14 + 6 ขั้น

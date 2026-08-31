@@ -77,7 +77,7 @@ def run_fast_asymmetry_scan():
                     "time_seconds": elapsed,
                 }
 
-    out_file = r"F:\_Ai\sgoed\V5\matrix\audit_v13_fast_results.json"
+    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v13_fast_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\n[Done] Saved fast asymmetry audit to: {out_file}", flush=True)

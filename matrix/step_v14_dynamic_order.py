@@ -11,7 +11,7 @@ sys.path.insert(0, ".")
 from sgoed_matrix_ecosystem_v14 import action_v14
 from sgoed_core_v7 import _compute_v_hat
 
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 
 
 def run_track(M, N, D, d, g_inter, n_therm, seed, rec_every=3):

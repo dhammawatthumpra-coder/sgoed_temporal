@@ -9,7 +9,7 @@ Coupling normalized (bounded) + global capacity gate + sparsity.
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 from sgoed_core_v7 import _compute_v_hat
 
 

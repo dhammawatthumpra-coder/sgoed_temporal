@@ -3,7 +3,7 @@
 import sys,json,time,hashlib,traceback
 from pathlib import Path
 import numpy as np
-ROOT=Path(r'F:\_Ai\sgoed\V5'); CODE=ROOT/'code'; DATA=ROOT/'data'
+ROOT=Path(r'F:\_Ai\sgoed\sgoed'); CODE=ROOT/'code'; DATA=ROOT/'data'
 OUT=DATA/'phase_d_g08_wall_crossover.out'; JSON_OUT=DATA/'phase_d_g08_wall_crossover.json'
 CORE=CODE/'sgoed_core_v6.py'; SCRIPT=CODE/'phase_d_g08_wall_crossover.py'
 sys.path.insert(0,str(CODE)); from sgoed_core_v6 import run_simulation

@@ -247,7 +247,7 @@ def run_full_ablation_audit():
                 f"Align: {avg_align*100:5.1f}% | Time: {elapsed:.1f}s"
             )
 
-    out_file = r"F:\_Ai\sgoed\V5\matrix\audit_v12_ablation_results.json"
+    out_file = "audit_v12_ablation_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(all_results, f, indent=2)
     print(f"\n[Done] Saved ablation audit results to: {out_file}")

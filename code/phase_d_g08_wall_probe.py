@@ -1,7 +1,7 @@
 ﻿import sys, json, time, hashlib, traceback
 from pathlib import Path
 import numpy as np
-ROOT=Path(r"F:\_Ai\sgoed\V5"); CODE=ROOT/'code'; DATA=ROOT/'data'
+ROOT=Path(r"F:\_Ai\sgoed\sgoed"); CODE=ROOT/'code'; DATA=ROOT/'data'
 OUT=DATA/'phase_d_g08_wall_probe.out'; JSON_OUT=DATA/'phase_d_g08_wall_probe.json'
 CORE=CODE/'sgoed_core_v6.py'; SCRIPT=CODE/'phase_d_g08_wall_probe.py'
 sys.path.insert(0,str(CODE)); from sgoed_core_v6 import run_simulation

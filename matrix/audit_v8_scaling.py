@@ -63,7 +63,7 @@ def run_scaling_audit():
         )
 
     # Save summary
-    out_file = r"F:\_Ai\sgoed\V5\matrix\audit_v8_scaling_results.json"
+    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v8_scaling_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\n[Done] Saved scaling audit results to: {out_file}")

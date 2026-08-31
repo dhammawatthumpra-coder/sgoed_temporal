@@ -16,7 +16,7 @@ Quantities (S seeds x M units, D=2 unit vectors):
 import json
 import sys
 import numpy as np
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 from step_sequential_growth import sequential_growth
 from sgoed_core_v7 import _compute_v_hat
 
@@ -53,6 +53,6 @@ if __name__ == "__main__":
         for g in [1.0, 5.0, 20.0, 60.0]:
             r = report(M, g, therm=60)
             out[f"M{M}_g{g}"] = r
-    with open(r"F:\_Ai\sgoed\V5\matrix\step_growth_mechanism_results.json", "w") as f:
+    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_mechanism_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_mechanism_results.json")

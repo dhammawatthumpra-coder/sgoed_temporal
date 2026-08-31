@@ -9,7 +9,7 @@
 ## 📂 Project Structure
 
 ```text
-V5/
+
 ├── README.md                  # This file
 ├── manuscript_v5.tex          # Main LaTeX manuscript
 ├── references.bib             # Bibliography

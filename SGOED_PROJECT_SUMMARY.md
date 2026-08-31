@@ -106,4 +106,4 @@ order ทุกแบบ) พังหมดเมื่อเจอการต
 *แหล่งอ้างอิงรายละเอียด: `SGOED_v7_feedback_notes.md`, `SGOED_v8_relational_notes.md`,
 `SGOED_v9_hypergraph_notes.md`, `SGOED_v10_ecosystem_notes.md`, `SGOED_v12_graph_notes.md`,
 `SGOED_v12_summary.md`, `SGOED_v13_asymmetric_notes.md`, `SGOED_v14_notes.md`,
-`manuscript_v6.tex` (ทั้งหมดใน `V5/` และ `V5/matrix/`)*
+`manuscript_v6.tex` (ทั้งหมดใน `` และ `matrix/`)*

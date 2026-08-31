@@ -1,7 +1,7 @@
 # Handoff — SGOED V5: Quest "Emergent Time" (Arrow of Time)
 
 **วันที่:** 2026-08-31 · **ภาษา:** ต้องตอบเป็นภาษาไทยเท่านั้น (ตาม AGENTS.md)
-**งานทั้งหมดอยู่ที่:** `F:\_Ai\sgoed\V5\` และ `F:\_Ai\sgoed\V5\matrix\`
+**งานทั้งหมดอยู่ที่:** `F:\_Ai\sgoed\sgoed\` และ `F:\_Ai\sgoed\sgoed\matrix\`
 
 ---
 
@@ -20,14 +20,14 @@
 
 | ไฟล์ | เนื้อหา |
 |---|---|
-| `V5\matrix\SGOED_TIME_EMERGENCE_SUMMARY.md` | **เอกสารหลัก — ผลเวลาจริง 3 ทาง + วิวัฒนาการ (FINAL)** |
-| `V5\SGOED_PROJECT_SUMMARY.md` | ภาพรวมโครงการ v6–v14 + บทเรียนระเบียบวิธี 6 ขั้น |
-| `V5\matrix\SGOED_sequential_growth_notes.md` | รายละเอียด sequential growth |
-| `V5\matrix\SGOED_past_hypothesis_notes.md` | Past Hypothesis |
-| `V5\matrix\SGOED_v14_notes.md` | v14 (matrix-units hybrid — simultaneity 1.000 แต่ order ไม่เกิด) |
-| `V5\matrix\SGOED_v12_graph_notes.md` + `SGOED_v12_summary.md` | v12 (condensation engineered, sink-hub, G metric) |
-| `V5\matrix\SGOED_v13_asymmetric_notes.md` | v13 (coupling-only — ไม่ significant ที่ 10 seeds) |
-| `V5\matrix\SGOED_v7_feedback_notes.md`, `v8/v9/v10` notes | matrix/graph/hypergraph/ecosystem ผลตรวจก่อนหน้า |
+| `matrix\SGOED_TIME_EMERGENCE_SUMMARY.md` | **เอกสารหลัก — ผลเวลาจริง 3 ทาง + วิวัฒนาการ (FINAL)** |
+| `SGOED_PROJECT_SUMMARY.md` | ภาพรวมโครงการ v6–v14 + บทเรียนระเบียบวิธี 6 ขั้น |
+| `matrix\SGOED_sequential_growth_notes.md` | รายละเอียด sequential growth |
+| `matrix\SGOED_past_hypothesis_notes.md` | Past Hypothesis |
+| `matrix\SGOED_v14_notes.md` | v14 (matrix-units hybrid — simultaneity 1.000 แต่ order ไม่เกิด) |
+| `matrix\SGOED_v12_graph_notes.md` + `SGOED_v12_summary.md` | v12 (condensation engineered, sink-hub, G metric) |
+| `matrix\SGOED_v13_asymmetric_notes.md` | v13 (coupling-only — ไม่ significant ที่ 10 seeds) |
+| `matrix\SGOED_v7_feedback_notes.md`, `v8/v9/v10` notes | matrix/graph/hypergraph/ecosystem ผลตรวจก่อนหน้า |
 
 **สคริปต์ที่รันได้:** `step_langevin_transport_tuned.py` (non-eq flow — สำเร็จ), `step_sequential_growth.py` (growth), `step_past_hypothesis.py`
 

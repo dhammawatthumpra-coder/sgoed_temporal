@@ -143,7 +143,7 @@ for N in [12, 16, 24, 32]:
     results[f"N_{N}"]["d_BD_est"] = int(d_est)
     print(f"  -> N={N}: d_BD(real) ~ {d_est}D | d_BD(null) ~ {d_est_n}D")
 
-out_file = r"F:\_Ai\sgoed\V5\matrix\audit_bd_dimension_results.json"
+out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_bd_dimension_results.json"
 with open(out_file, "w", encoding="utf-8") as f:
     json.dump({"calibration": curve, "hypergraph": results}, f, indent=2)
 print(f"\n[Done] Saved to: {out_file}")

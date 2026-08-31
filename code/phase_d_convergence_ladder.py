@@ -2,7 +2,7 @@
 from pathlib import Path
 import numpy as np
 
-ROOT = Path(r"F:\_Ai\sgoed\V5")
+ROOT = Path(r"F:\_Ai\sgoed\sgoed")
 CODE = ROOT / 'code'
 DATA = ROOT / 'data'
 OUT = DATA / 'phase_d_convergence_ladder.out'

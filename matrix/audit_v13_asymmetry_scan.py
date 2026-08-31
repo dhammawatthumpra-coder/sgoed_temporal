@@ -82,7 +82,7 @@ def run_asymmetry_scan():
                     f"Align: {avg_align*100:5.1f}% | Time: {elapsed:.1f}s"
                 )
 
-    out_file = r"F:\_Ai\sgoed\V5\matrix\audit_v13_asymmetry_results.json"
+    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v13_asymmetry_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\n[Done] Saved full v13 asymmetry audit to: {out_file}")

@@ -181,7 +181,7 @@ for N in sizes:
         f"lazy-walk d_s: {np.mean(db_list):5.2f} | R: {np.mean(r_list):.4f} | Lmax: {np.mean(lmax_list):6.1f}"
     )
 
-out_file = r"F:\_Ai\sgoed\V5\matrix\audit_spectral_dimension_correct_results.json"
+out_file = "audit_spectral_dimension_correct_results.json"
 with open(out_file, "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2)
 print(f"\n[Done] Saved to: {out_file}")

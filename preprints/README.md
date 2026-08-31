@@ -1,8 +1,8 @@
-# SGOED V5 — Preprints (Zenodo-ready)
+# SGOED — Preprints (Zenodo-ready)
 
 Two self-contained preprint folders, one per Zenodo release (each gets its
 own DOI). Each folder carries ONLY what is needed to read and reproduce its
-manuscript — the full live workspace remains in `V5/` and `V5/matrix/`.
+manuscript — the full live workspace remains in the repo root (`code/`, `matrix/`, …).
 
 | Folder | Manuscript | Content |
 |---|---|---|
@@ -32,7 +32,7 @@ standalone from inside `code/` (scripts insert their folder into
 Each preprint folder carries its own `.zenodo.json` (the format Zenodo's
 GitHub integration reads). Upload via the web form, or — when publishing
 through the GitHub→Zenodo integration — the file **at the repo root**
-(`V5/.zenodo.json`) is read per tagged commit:
+(`.zenodo.json`) is read per tagged commit:
 
 - **tag `v7.0.0`** → root already carries the v7 metadata (current HEAD).
 - **tag `v6.0.0`** → before tagging, copy the v6 variant to the root:

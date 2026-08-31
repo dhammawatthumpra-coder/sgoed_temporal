@@ -2,7 +2,7 @@
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 from step_langevin_flow import grad_num, measure
 
 

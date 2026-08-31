@@ -134,6 +134,6 @@ if __name__ == "__main__":
         out[tag] = {"sorted": rfinal.tolist(), "top3_gap_mean": float(np.mean(g3s)),
                     "top3_gap_std": float(np.std(g3s)), "iso_all": float(np.mean(isos)),
                     "sat_mean": float(np.mean(sats))}
-    with open(r"F:\_Ai\sgoed\V5\matrix\sgoed_matrix_v15_bnd_results.json", "w") as f:
+    with open(r"F:\_Ai\sgoed\sgoed\matrix\sgoed_matrix_v15_bnd_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> sgoed_matrix_v15_bnd_results.json")

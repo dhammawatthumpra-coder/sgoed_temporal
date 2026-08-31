@@ -97,7 +97,7 @@ def run_ecosystem_sync_battery():
         "universe_count_scaling": m_results,
     }
 
-    out_file = r"F:\_Ai\sgoed\V5\matrix\audit_v11_sync_results.json"
+    out_file = r"F:\_Ai\sgoed\sgoed\matrix\audit_v11_sync_results.json"
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(full_report, f, indent=2)
     print(f"\n[Done] Saved full ecosystem sync audit to: {out_file}")

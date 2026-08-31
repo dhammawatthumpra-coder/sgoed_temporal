@@ -96,6 +96,6 @@ if __name__ == "__main__":
     for kt in [2.0, 5.0, 10.0]:
         key = f"B_kt{int(kt)}"
         out[key] = audit(key, lambda N, s, k=kt: gen_B(N, s, k))
-    with open(r"F:\_Ai\sgoed\V5\matrix\step_growth_soc_results.json", "w") as f:
+    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_soc_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_soc_results.json")

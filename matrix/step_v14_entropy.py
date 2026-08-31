@@ -10,7 +10,7 @@ Compare: coupled (g_inter>0) vs null (g_inter=0) — does coupling change the
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 from sgoed_matrix_ecosystem_v14 import action_v14
 
 

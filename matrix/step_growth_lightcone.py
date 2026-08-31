@@ -24,7 +24,7 @@ import json
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, r"F:\_Ai\sgoed\sgoed\code")
 from step_causal_set_scale_study import calibration, read_dim
 from step_sequential_growth import sequential_growth
 
@@ -131,6 +131,6 @@ if __name__ == "__main__":
     for v in verdict:
         print(v)
     out["verdict"] = verdict
-    with open(r"F:\_Ai\sgoed\V5\matrix\step_growth_lightcone_results.json", "w") as f:
+    with open(r"F:\_Ai\sgoed\sgoed\matrix\step_growth_lightcone_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_lightcone_results.json")

@@ -519,7 +519,7 @@ d ชนเพดาน 8) — จับได้ด้วย Gate 2 (c_eff→0)
 - engineered ≠ emergence — invariance จริง, ค่ามิติเป็น parameter เสมอ
 - "จำเป็น (ในครอบครัวที่ทดสอบ)" ≠ "กฎสากล" — ไม่ over-claim
 
-### สถานะไฟล์ (ทั้งหมดใน V5/)
+### สถานะไฟล์ (ทั้งหมดใน )
 - **เอกสาร:** `manuscript_v7.md` (ฉบับสมบูรณ์ §4.6 อัปเดตล่าสุด),
   `SGOED_TIME_PAPER_DRAFT.md`, `SGOED_TIME_EMERGENCE_SUMMARY.md` (อัปเดต 1–17),
   `SGOED_PROJECT_SUMMARY.md`, `SGOED_handoff.md`

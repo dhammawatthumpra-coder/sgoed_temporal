@@ -3,11 +3,11 @@
 
 ## ✅ ขั้นตอนต่อไป
 
-1. **สร้างโฟลเดอร์:** `F:\_Ai\sgoed\V5\`
+1. **สร้างโฟลเดอร์:** `F:\_Ai\sgoed\sgoed\`
 2. **บันทึกไฟล์ทั้ง 4 ข้างต้น** ลงในโฟลเดอร์นั้น
 3. **Compile LaTeX:**
    ```bash
-   cd F:\_Ai\sgoed\V5
+   cd F:\_Ai\sgoed\sgoed
    pdflatex manuscript_v5.tex
    bibtex manuscript_v5
    pdflatex manuscript_v5.tex
