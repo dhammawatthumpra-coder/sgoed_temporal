@@ -117,6 +117,6 @@ if __name__ == "__main__":
         ("lorentz D=10 (1+9)", "lorentz", 10),
     ]:
         out[label] = batch(label, mode, D, N=6)
-    with open(r"F:\_Ai\sgoed\V5\matrix\sgoed_matrix_v15_results.json", "w") as f:
+    with open("sgoed_matrix_v15_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> sgoed_matrix_v15_results.json")

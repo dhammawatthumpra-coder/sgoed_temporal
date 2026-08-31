@@ -6,7 +6,7 @@ T=0.02 (very low noise floor), 400 steps.
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, ".")
 from sgoed_core_v7 import _compute_v_hat
 
 

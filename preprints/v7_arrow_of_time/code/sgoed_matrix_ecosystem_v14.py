@@ -11,7 +11,7 @@ should align into a coherent "molecule" — and E_u provides an order axis.
 """
 import numpy as np
 import sys
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, ".")
 from sgoed_core_v7 import action_v7, _compute_v_hat
 
 

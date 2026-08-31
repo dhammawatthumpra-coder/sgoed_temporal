@@ -64,6 +64,6 @@ for name, d_sp, walk_flag in [("uniform d_sp=1 [target 2]", 1, False),
         cscan[f"{name}|c={val}"] = round(m, 3)
 out["c_scan"] = cscan
 
-with open(r"F:\_Ai\sgoed\V5\matrix\step_lightcone_followup_results.json", "w") as f:
+with open("step_lightcone_followup_results.json", "w") as f:
     json.dump(out, f, indent=2)
 print("\nsaved -> step_lightcone_followup_results.json")

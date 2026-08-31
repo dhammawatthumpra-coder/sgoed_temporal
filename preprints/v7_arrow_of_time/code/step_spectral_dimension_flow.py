@@ -107,6 +107,6 @@ if __name__ == "__main__":
         r = report(f"tree alpha={alpha}", T, "t", plateau=(60, 400))
         out[f"tree_alpha_{alpha}"] = r
 
-    with open(r"F:\_Ai\sgoed\V5\matrix\step_spectral_dimension_flow_results.json", "w") as f:
+    with open("step_spectral_dimension_flow_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_spectral_dimension_flow_results.json")

@@ -17,7 +17,7 @@ import json
 import sys
 import numpy as np
 sys.path.insert(0, ".")
-sys.path.insert(0, r"F:\_Ai\sgoed\V5\code")
+sys.path.insert(0, ".")
 from step_causal_set_scale_study import calibration, read_dim
 from step_sequential_growth import sequential_growth
 from step_growth_commutator import dcomp_growth
@@ -82,6 +82,6 @@ if __name__ == "__main__":
                   f"std_acr={std_acr:.3f} -> {verdict}", flush=True)
             out[f"f{f}_th{th}"] = {"d": {str(N): rows[str(N)] for N in Ns},
                                    "std_across_N": std_acr, "verdict": verdict}
-    with open(r"F:\_Ai\sgoed\V5\matrix\step_growth_commutator_scan_results.json", "w") as f:
+    with open("step_growth_commutator_scan_results.json", "w") as f:
         json.dump(out, f, indent=2)
     print("\nsaved -> step_growth_commutator_scan_results.json")
