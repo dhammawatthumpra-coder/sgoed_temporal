@@ -24,6 +24,12 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% allow inline \texttt (code/paths) to break at any character
+\makeatletter
+\renewcommand{\texttt}[1]{{\ttfamily\hyphenchar\font=`\-\relax #1}}
+\makeatother
+\emergencystretch=2em
+
 % Theorem environments
 \newtheorem{definition}{Definition}
 \newtheorem{proposition}{Proposition}
@@ -415,7 +421,7 @@ current \(J\)
 \bottomrule\noalign{}
 \endlastfoot
 \textbf{REAL (pump@0)} &
-\([28.8,\,1.72,\,0.117,\,0.0247,\,0.020,\,0.005]\) &
+\([28.8,\allowbreak\,1.72,\allowbreak\,0.117,\allowbreak\,0.0247,\allowbreak\,0.020,\allowbreak\,0.005]\) &
 \textbf{\(+5.773\pm0.016\)} \\
 REVERSED (pump@5) & \(\sim[0.02,\dots,30.1]\) & \(-6.025\pm0.022\) \\
 NULL (no pump) & flat \(\sim0.1\) & \(+0.003\pm0.008\) \\
@@ -698,8 +704,8 @@ transfers to any future attempt.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Appendix A:
-Reproducibility}\label{appendix-a-reproducibility}
+\appendix
+\section{Reproducibility}\label{appendix-a-reproducibility}\begingroup\small\sloppy
 
 All scripts run on CPU with fixed seeds; results JSONs saved alongside.
 Key parameters:
@@ -749,7 +755,7 @@ reported). Detailed reproducibility notes and the full results chain
 (updates 1--12) in \texttt{matrix/SGOED\_TIME\_EMERGENCE\_SUMMARY.md};
 project context in \texttt{SGOED\_PROJECT\_SUMMARY.md}.
 
-\section{Trap Catalog}\label{appendix-b-trap-catalog}
+\endgroup\section{Trap Catalog}\label{appendix-b-trap-catalog}
 
 Every metric that ``looked exciting'' in this project failed exactly one
 of the gates below. The catalog is supplied as a structured table plus a

@@ -30,11 +30,15 @@ BODY = re.sub(r"\\subsection\{(\d+)\.\s*", r"\\subsection{", BODY)
 BODY = re.sub(r"\\subsubsection\{(\d+)\.\s*", r"\\subsubsection{", BODY)
 BODY = BODY.replace("\\subsection{", "\\section{").replace("\\subsubsection{", "\\subsection{")
 
-# --- 5. appendices (pandoc auto-labels B only; A gets one here) ---
-BODY = re.sub(r"\\section\{Appendix A: Reproducibility\}",
-              r"\\appendix\n\\section{Reproducibility}\\label{appendix-a-reproducibility}", BODY)
-BODY = re.sub(r"\\section\{Appendix B: Trap Catalog\}\\label\{appendix-b-trap-catalog\}",
-              r"\\section{Trap Catalog}\\label{appendix-b-trap-catalog}", BODY)
+# --- 5. appendices (headings may be wrapped by pandoc -> allow \s+) ---
+BODY = re.sub(r"\\section\{Appendix\s+A:\s+Reproducibility\}\s*\\label\{appendix-a-reproducibility\}",
+              r"\\appendix\n\\section{Reproducibility}\\label{appendix-a-reproducibility}"
+              r"\\begingroup\\small\\sloppy", BODY)
+BODY = re.sub(r"\\section\{Appendix\s+B:\s+Trap\s+Catalog\}\s*\\label\{appendix-b-trap-catalog\}",
+              r"\\endgroup\\section{Trap Catalog}\\label{appendix-b-trap-catalog}", BODY)
+
+# --- maths: allow line breaks after commas in inline math (wide E-profiles) ---
+BODY = BODY.replace(",\\,", ",\\allowbreak\\,")
 
 # --- 5b. pandoc strips the manual number from heading ids; restore links ---
 BODY = BODY.replace("\\hyperref[42-route-1-past-hypothesis]",
@@ -82,6 +86,12 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 \geometry{margin=1in}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% allow inline \texttt (code/paths) to break at any character
+\makeatletter
+\renewcommand{\texttt}[1]{{\ttfamily\hyphenchar\font=`\-\relax #1}}
+\makeatother
+\emergencystretch=2em
 
 % Theorem environments
 \newtheorem{definition}{Definition}
