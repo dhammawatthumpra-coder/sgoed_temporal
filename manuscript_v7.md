@@ -20,7 +20,7 @@ We ask a focused question in a toy universe of coupled matrix/graph/causal-set m
 
 We then audit the "emergent 4D" question that drove the project's excitement into a dead end. Euclidean IKKT-like actions at $D=4,10$ are perfectly isotropic without an engineered steering vector $\hat v$; a pseudo-Euclidean signature produces a stable $1{+}3$ split only as an engineered $\eta$ (spatial isotropy $10^{-3}$); Lorentzian real-time bosonic dynamics is unbounded below (the regulator in the literature is the fermion determinant); random-percolation causal sets give "$d\approx4$" only as a **finite-size artifact of $N=250$** that fails a scale audit to $N=1000$ under both fixed-$p$ and fixed-$k$ scalings; and spectral dimension measured on flow networks tracks drift/transience rather than geometry. The one structural discovery is that a **relational light-cone law** (matrix-distance $\le c\,\Delta t$ plus direction alignment) makes the causal dimension *scale-invariant* ($\mathrm{std}$ across $N$ of $0.002$–$0.01$, versus $0.26$–$0.82$ for percolation) — a necessary condition for a dimensionful causal set — although the absolute dimension remains parameter-controlled (diffusion/light-speed aspect), i.e., engineered.
 
-**Bottom line:** at toy scale, the arrow of time lives in the *process* (initial condition or asymmetric construction), not in the equilibrium ensemble; and 4D does not emerge spontaneously in any of the audited frameworks. The audit itself — a six-step verification protocol and a trap catalog — is the project's transferable contribution, shipped as a runnable toolbox (`code/audit_gates.py`, Supplement A) with the full v8–v14 evidence slice (`audit_evidence/`).
+**Bottom line:** at toy scale, the arrow of time lives in the *process* (initial condition or asymmetric construction), not in the equilibrium ensemble; and 4D does not emerge spontaneously in any of the audited frameworks. The audit itself — a six-step verification protocol and a trap catalog — is the project's transferable contribution, shipped as a runnable toolbox (`code/audit_gates.py`, Supplement A) with the full v8–v14 evidence slice (`matrix/`).
 
 **Keywords:** arrow of time, matrix models, sequential growth, causal sets, spectral dimension, Monte Carlo audit, past hypothesis
 
@@ -74,7 +74,7 @@ A unit holds real symmetric matrices $X = (X^1,\dots,X^D)$ of size $N\times N$ (
 
 $$S = \sum_{\mu<\nu}\mathrm{Tr}([X_\mu,X_\nu][X_\mu,X_\nu]^T) + \sum_\mu \lambda\big(\mathrm{Tr}(X_\mu^2)-Nr_0^2\big)^2 \ -\ g_{XY}\sum_\mu \hat v_\mu^2\,\mathrm{Tr}(X_\mu^4),$$
 
-where $\hat v = \mathrm{normalize}(\mathrm{Tr}(Y^1),\dots,\mathrm{Tr}(Y^d))$ is the observer direction. The coupling $-\hat v_\mu^2\mathrm{Tr}(X_\mu^4)$ drives exactly the dimension(s) aligned with $\hat v$ to large extent $\mathrm{Tr}(X_\mu^2)/N$ — a *discrete* winner-take-all choice among $D$ dimensions (condensation ratio $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23$, $\sim 60\sigma$ over baseline [[7](#ref-7)]), with first-order bistability/hysteresis (audited scripts `AUDIT_v7_hysteresis*` in `audit_evidence/`; see also the v6 preprint). This mechanism is the reproducible core of the project; it picks *a* direction but does not create *flow*.
+where $\hat v = \mathrm{normalize}(\mathrm{Tr}(Y^1),\dots,\mathrm{Tr}(Y^d))$ is the observer direction. The coupling $-\hat v_\mu^2\mathrm{Tr}(X_\mu^4)$ drives exactly the dimension(s) aligned with $\hat v$ to large extent $\mathrm{Tr}(X_\mu^2)/N$ — a *discrete* winner-take-all choice among $D$ dimensions (condensation ratio $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23$, $\sim 60\sigma$ over baseline [[7](#ref-7)]), with first-order bistability/hysteresis (audited scripts `AUDIT_v7_hysteresis*` at the repo root; see also the v6 preprint). This mechanism is the reproducible core of the project; it picks *a* direction but does not create *flow*.
 
 ### 2.2 Growth, transport, and posets
 
@@ -239,20 +239,20 @@ In the SGOED toy universe: the arrow of time is not in the equilibrium ensemble 
 All scripts run on CPU with fixed seeds; results JSONs saved alongside. Key parameters:
 
 - v7 unit: $N\le8$, $D=2$, coupling $g_{XY}=0.8$, gates $\lambda=1$, `max_extent=10`.
-- Past hypothesis: `step_past_hypothesis.py` ($N=4$, 3 seeds).
-- Sequential growth: `step_sequential_growth.py` ($M=8..32$, $g_{\mathrm{inter}}=20$, $n_{\mathrm{therm}}=100$); mechanism: `step_growth_mechanism.py`; past-hypothesis variant: `step_growth_past_hypothesis.py` ($n_{\mathrm{therm}}=120$).
-- Transport: `step_langevin_transport_tuned.py` + `step_transport_robust.py` (8 seeds $\times$ 500 steps; scan $g_{\mathrm{trans}}\times g_{\mathrm{sink}}$).
-- 4D probes: `sgoed_matrix_v15.py`, `step_v15_dynamical.py`, `step_v15_bounded.py`.
-- Causal sets: `step_causal_set_dmm.py`, `step_causal_set_scale_study.py` (bitset transitive closure; per-$N$ calibration), `step_growth_lightcone.py`, `step_lightcone_followup.py`.
-- Spectral dimension: `step_spectral_dimension_flow.py` (lazy walk).
-- Audit toolbox (Supplement A): `code/audit_gates.py` — six gates as reusable functions, with a self-test that demonstrates each trap class. The negative-evidence slice behind Sections 3/4.1/Appendix B ships in `audit_evidence/` (v8–v14 cores, audit scripts, results) and `notes/SGOED_v8..v14_notes.md`. The bistability/hysteresis claim of Section 2.1 is backed by `audit_evidence/code/AUDIT_v7_hysteresis.py` + its result JSON.
-- **Self-tuning variants audited:** degree-feedback (SOC-style, `code/step_growth_soc.py`) fails the scale-invariance gate outright in all 7 configs (std across $N$ of 0.25–1.09); curvature-feedback (`c_eff`, `code/step_growth_ceff.py`) fails outright in 2 of 12 configs (std 0.45–0.48), while its 9 remaining non-control runs sit pinned at the calibration ceiling ($d=8.00$, std $=0$ — a boundary artifact, 5 of them yielding NaN $c_{\mathrm{eff}}$ statistics — not genuine invariance); only the static-cone control passes genuinely (std 0.006). Per-config results: `results/step_growth_soc_results.json`, `results/step_growth_ceff_results.json`; full record in the living summary (updates 13–14).
+- Past hypothesis: `matrix/step_past_hypothesis.py` ($N=4$, 3 seeds).
+- Sequential growth: `matrix/step_sequential_growth.py` ($M=8..32$, $g_{\mathrm{inter}}=20$, $n_{\mathrm{therm}}=100$); mechanism: `matrix/step_growth_mechanism.py`; past-hypothesis variant: `matrix/step_growth_past_hypothesis.py` ($n_{\mathrm{therm}}=120$).
+- Transport: `matrix/step_langevin_transport_tuned.py` + `matrix/step_transport_robust.py` (8 seeds $\times$ 500 steps; scan $g_{\mathrm{trans}}\times g_{\mathrm{sink}}$).
+- 4D probes: `matrix/sgoed_matrix_v15.py`, `matrix/step_v15_dynamical.py`, `matrix/step_v15_bounded.py`.
+- Causal sets: `matrix/step_causal_set_dmm.py`, `matrix/step_causal_set_scale_study.py` (bitset transitive closure; per-$N$ calibration), `matrix/step_growth_lightcone.py`, `matrix/step_lightcone_followup.py`.
+- Spectral dimension: `matrix/step_spectral_dimension_flow.py` (lazy walk).
+- Audit toolbox (Supplement A): `code/audit_gates.py` — six gates as reusable functions, with a self-test that demonstrates each trap class. The negative-evidence slice behind Sections 3/4.1/Appendix B ships in `matrix/` (v8–v14 cores, audit scripts, results) and the per-version notes in `matrix/`. The bistability/hysteresis claim of Section 2.1 is backed by `AUDIT_v7_hysteresis.py` + `AUDIT_v7_hysteresis_results.json` (repo root).
+- **Self-tuning variants audited:** degree-feedback (SOC-style, `matrix/step_growth_soc.py`) fails the scale-invariance gate outright in all 7 configs (std across $N$ of 0.25–1.09); curvature-feedback (`c_eff`, `matrix/step_growth_ceff.py`) fails outright in 2 of 12 configs (std 0.45–0.48), while its 9 remaining non-control runs sit pinned at the calibration ceiling ($d=8.00$, std $=0$ — a boundary artifact, 5 of them yielding NaN $c_{\mathrm{eff}}$ statistics — not genuine invariance); only the static-cone control passes genuinely (std 0.006). Per-config results: `matrix/step_growth_soc_results.json`, `matrix/step_growth_ceff_results.json`; full record in the living summary (updates 13–14).
 
 Seeds: $\{42,\dots,53\}$ (≥10 for fine grids; ≥6 elsewhere, as reported). Detailed reproducibility notes and the full results chain (updates 1–17) in `matrix/SGOED_TIME_EMERGENCE_SUMMARY.md`; project context in `SGOED_PROJECT_SUMMARY.md`.
 
 ## Appendix B: Trap Catalog
 
-Every metric that "looked exciting" in this project failed exactly one of the gates below. The catalog is supplied as a structured eight-trap table below plus a runnable toolbox (`code/audit_gates.py`, Supplement A); the full **12**-trap catalog and an eight-step auditing workflow ship as Supplement B (`SUPPLEMENT_B_AUDIT_HANDBOOK.md`); the v8–v14 scripts and results backing each row ship in `audit_evidence/`.
+Every metric that "looked exciting" in this project failed exactly one of the gates below. The catalog is supplied as a structured eight-trap table below plus a runnable toolbox (`code/audit_gates.py`, Supplement A); the full **12**-trap catalog and an eight-step auditing workflow ship as Supplement B (`SUPPLEMENT_B_AUDIT_HANDBOOK.md`); the v8–v14 scripts and results backing each row ship in `matrix/`.
 
 | # | trap | symptom | gate that caught it | fix / lesson |
 |---|---|---|---|---|

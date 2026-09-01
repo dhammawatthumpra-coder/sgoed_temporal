@@ -111,7 +111,7 @@ the audited frameworks. The audit itself --- a six-step verification
 protocol and a trap catalog --- is the project's transferable
 contribution, shipped as a runnable toolbox
 (\texttt{code/audit\_gates.py}, Supplement A) with the full v8--v14
-evidence slice (\texttt{audit\_evidence/}).
+evidence slice (\texttt{matrix/}).
 
 \textbf{Keywords:} arrow of time, matrix models, sequential growth,
 causal sets, spectral dimension, Monte Carlo audit, past hypothesis
@@ -191,9 +191,9 @@ aligned with \(\hat v\) to large extent \(\mathrm{Tr}(X_\mu^2)/N\) --- a
 (condensation ratio \(\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23\),
 \(\sim 60\sigma\) over baseline \cite{chanpengpad_sgoed_v2}), with
 first-order bistability/hysteresis (audited scripts
-\texttt{AUDIT\_v7\_hysteresis*} in \texttt{audit\_evidence/}; see also
-the v6 preprint). This mechanism is the reproducible core of the
-project; it picks \emph{a} direction but does not create \emph{flow}.
+\texttt{AUDIT\_v7\_hysteresis*} at the repo root; see also the v6
+preprint). This mechanism is the reproducible core of the project; it
+picks \emph{a} direction but does not create \emph{flow}.
 
 \subsection{Growth, transport, and
 posets}\label{growth-transport-and-posets}
@@ -714,51 +714,53 @@ Key parameters:
   v7 unit: \(N\le8\), \(D=2\), coupling \(g_{XY}=0.8\), gates
   \(\lambda=1\), \texttt{max\_extent=10}.
 \item
-  Past hypothesis: \texttt{step\_past\_hypothesis.py} (\(N=4\), 3
+  Past hypothesis: \texttt{matrix/step\_past\_hypothesis.py} (\(N=4\), 3
   seeds).
 \item
-  Sequential growth: \texttt{step\_sequential\_growth.py} (\(M=8..32\),
-  \(g_{\mathrm{inter}}=20\), \(n_{\mathrm{therm}}=100\)); mechanism:
-  \texttt{step\_growth\_mechanism.py}; past-hypothesis variant:
-  \texttt{step\_growth\_past\_hypothesis.py}
+  Sequential growth: \texttt{matrix/step\_sequential\_growth.py}
+  (\(M=8..32\), \(g_{\mathrm{inter}}=20\), \(n_{\mathrm{therm}}=100\));
+  mechanism: \texttt{matrix/step\_growth\_mechanism.py}; past-hypothesis
+  variant: \texttt{matrix/step\_growth\_past\_hypothesis.py}
   (\(n_{\mathrm{therm}}=120\)).
 \item
-  Transport: \texttt{step\_langevin\_transport\_tuned.py} +
-  \texttt{step\_transport\_robust.py} (8 seeds \(\times\) 500 steps;
-  scan \(g_{\mathrm{trans}}\times g_{\mathrm{sink}}\)).
+  Transport: \texttt{matrix/step\_langevin\_transport\_tuned.py} +
+  \texttt{matrix/step\_transport\_robust.py} (8 seeds \(\times\) 500
+  steps; scan \(g_{\mathrm{trans}}\times g_{\mathrm{sink}}\)).
 \item
-  4D probes: \texttt{sgoed\_matrix\_v15.py},
-  \texttt{step\_v15\_dynamical.py}, \texttt{step\_v15\_bounded.py}.
+  4D probes: \texttt{matrix/sgoed\_matrix\_v15.py},
+  \texttt{matrix/step\_v15\_dynamical.py},
+  \texttt{matrix/step\_v15\_bounded.py}.
 \item
-  Causal sets: \texttt{step\_causal\_set\_dmm.py},
-  \texttt{step\_causal\_set\_scale\_study.py} (bitset transitive
-  closure; per-\(N\) calibration), \texttt{step\_growth\_lightcone.py},
-  \texttt{step\_lightcone\_followup.py}.
+  Causal sets: \texttt{matrix/step\_causal\_set\_dmm.py},
+  \texttt{matrix/step\_causal\_set\_scale\_study.py} (bitset transitive
+  closure; per-\(N\) calibration),
+  \texttt{matrix/step\_growth\_lightcone.py},
+  \texttt{matrix/step\_lightcone\_followup.py}.
 \item
-  Spectral dimension: \texttt{step\_spectral\_dimension\_flow.py} (lazy
-  walk).
+  Spectral dimension: \texttt{matrix/step\_spectral\_dimension\_flow.py}
+  (lazy walk).
 \item
   Audit toolbox (Supplement A): \texttt{code/audit\_gates.py} --- six
   gates as reusable functions, with a self-test that demonstrates each
   trap class. The negative-evidence slice behind Sections 3/4.1/Appendix
-  B ships in \texttt{audit\_evidence/} (v8--v14 cores, audit scripts,
-  results) and \texttt{notes/SGOED\_v8..v14\_notes.md}. The
+  B ships in \texttt{matrix/} (v8--v14 cores, audit scripts, results)
+  and the per-version notes in \texttt{matrix/}. The
   bistability/hysteresis claim of Section 2.1 is backed by
-  \texttt{audit\_evidence/code/AUDIT\_v7\_hysteresis.py} + its result
-  JSON.
+  \texttt{AUDIT\_v7\_hysteresis.py} +
+  \texttt{AUDIT\_v7\_hysteresis\_results.json} (repo root).
 \item
   \textbf{Self-tuning variants audited:} degree-feedback (SOC-style,
-  \texttt{code/step\_growth\_soc.py}) fails the scale-invariance gate
+  \texttt{matrix/step\_growth\_soc.py}) fails the scale-invariance gate
   outright in all 7 configs (std across \(N\) of 0.25--1.09);
   curvature-feedback (\texttt{c\_eff},
-  \texttt{code/step\_growth\_ceff.py}) fails outright in 2 of 12 configs
-  (std 0.45--0.48), while its 9 remaining non-control runs sit pinned at
-  the calibration ceiling (\(d=8.00\), std \(=0\) --- a boundary
-  artifact, 5 of them yielding NaN \(c_{\mathrm{eff}}\) statistics ---
-  not genuine invariance); only the static-cone control passes genuinely
-  (std 0.006). Per-config results:
-  \texttt{results/step\_growth\_soc\_results.json},
-  \texttt{results/step\_growth\_ceff\_results.json}; full record in the
+  \texttt{matrix/step\_growth\_ceff.py}) fails outright in 2 of 12
+  configs (std 0.45--0.48), while its 9 remaining non-control runs sit
+  pinned at the calibration ceiling (\(d=8.00\), std \(=0\) --- a
+  boundary artifact, 5 of them yielding NaN \(c_{\mathrm{eff}}\)
+  statistics --- not genuine invariance); only the static-cone control
+  passes genuinely (std 0.006). Per-config results:
+  \texttt{matrix/step\_growth\_soc\_results.json},
+  \texttt{matrix/step\_growth\_ceff\_results.json}; full record in the
   living summary (updates 13--14).
 \end{itemize}
 
@@ -775,7 +777,7 @@ table below plus a runnable toolbox (\texttt{code/audit\_gates.py},
 Supplement A); the full \textbf{12}-trap catalog and an eight-step
 auditing workflow ship as Supplement B
 (\texttt{SUPPLEMENT\_B\_AUDIT\_HANDBOOK.md}); the v8--v14 scripts and
-results backing each row ship in \texttt{audit\_evidence/}.
+results backing each row ship in \texttt{matrix/}.
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
