@@ -749,14 +749,18 @@ Key parameters:
   \texttt{audit\_evidence/code/AUDIT\_v7\_hysteresis.py} + its result
   JSON.
 \item
-  \textbf{Self-tuning variants audited (negative, §4.5--4.6):}
-  degree-feedback (SOC-style, \texttt{code/step\_growth\_soc.py}) and
+  \textbf{Self-tuning variants audited:} degree-feedback (SOC-style,
+  \texttt{code/step\_growth\_soc.py}) fails the scale-invariance gate
+  outright in all 7 configs (std across \(N\) of 0.25--1.09);
   curvature-feedback (\texttt{c\_eff},
-  \texttt{code/step\_growth\_ceff.py}) growth laws fail the
-  scale-invariance gate (std across \(N\) of 0.25--1.09 vs the
-  \(\le0.05\) pass bound); per-config results in
-  \texttt{code/step\_growth\_soc\_results.json} and
-  \texttt{code/step\_growth\_ceff\_results.json}, full record in the
+  \texttt{code/step\_growth\_ceff.py}) fails outright in 2 of 12 configs
+  (std 0.45--0.48), while its 10 remaining non-control runs sit pinned
+  at the calibration ceiling (\(d=8.00\), std \(=0\) --- a boundary
+  artifact, 5 of them yielding NaN \(c_{\mathrm{eff}}\) statistics ---
+  not genuine invariance); only the static-cone control passes genuinely
+  (std 0.006). Per-config results:
+  \texttt{results/step\_growth\_soc\_results.json},
+  \texttt{results/step\_growth\_ceff\_results.json}; full record in the
   living summary (updates 13--14).
 \end{itemize}
 
