@@ -25,5 +25,9 @@
     "toy model",
     "reproducible computational physics"
   ],
-  "language": "eng"
+  "language": "eng",
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.21786260", "relation": "cites", "resource_type": "publication-preprint"},
+    {"identifier": "10.5281/zenodo.21763905", "relation": "cites", "resource_type": "publication-preprint"}
+  ]
 }

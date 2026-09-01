@@ -45,3 +45,12 @@ After Zenodo mints the DOIs, fill them into `CITATION.cff` (both folders)
 and the `doi/url` fields there. The description fields in `.zenodo.json`
 are kept plain-ASCII-safe for the ingest pipeline (the manuscripts carry
 the full math).
+
+`related_identifiers` currently point to the two existing Zenodo records
+that both manuscripts cite (SGOED Phase 1–2 `10.5281/zenodo.21786260` and
+STF `10.5281/zenodo.21763905`, relation `cites`). **After v6.0.0's DOI is
+minted** (and before tagging v7.0.0), add a fourth entry to the v7 variant
+pointing back to the v6 record (`relation: "cites"` — Zenodo has no
+"continues" relation code; `resource_type: "publication-preprint"`), then
+re-seal the v7 `.zenodo.json` at root before the v7 tag. The v6 record
+cannot point to v7 (v6 DOI comes first).
