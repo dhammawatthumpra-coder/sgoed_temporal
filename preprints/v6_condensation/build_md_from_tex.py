@@ -109,7 +109,7 @@ front = """# Temporal Emergence from Dynamical Observer Coupling: A Matrix Model
 Email: `dhammawatthumpra@gmail.com`  
 ORCID: [0009-0001-4069-8576](https://orcid.org/0009-0001-4069-8576)
 
-**Date:** August 2026
+**Date:** September 2026
 
 ---
 

@@ -1,21 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the paper and Zenodo record."
-title: "SGOED v5: Dynamical Observer Model"
+title: "SGOED — The Arrow of Time Is Not in the Ensemble: An Audited Toy-Model Quest across Equilibrium Matrices, Sequential Growth, and Causal Sets (Preprint v7)"
 authors:
   - family-names: "Chanpengpad"
     given-names: "Sutipong"
     affiliation: "Independent Researcher, Chiang Rai, Thailand"
     orcid: "https://orcid.org/0009-0001-4069-8576"
-date-released: 2026-08-28
-version: 5.0.0
+date-released: 2026-09-01
+version: "7.0.0"
 doi: 10.5281/zenodo.XXXXXXX
 url: "https://zenodo.org/record/XXXXXXX"
 license: CC-BY-4.0
 keywords:
-  - dynamical observer
-  - temporal emergence
-  - matrix models
-  - symmetry breaking
-  - computational demonstration
-  - finite-size scaling
-  - parameter tuning
+  - arrow of time
+  - equilibrium time symmetry
+  - past hypothesis
+  - sequential growth
+  - causal sets
+  - spectral dimension
+  - relational light-cone
+  - scale-invariance audit
+  - toy model
+  - reproducible computational physics

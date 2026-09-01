@@ -22,7 +22,7 @@ The across-seed summary (mean / std / cv / align_rate over 5 seeds) is computed
 identically to the v5 audit for direct comparison.
 """
 import sys, os, json, time
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'code'))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sgoed_core_v6 import run_simulation
 import numpy as np
 

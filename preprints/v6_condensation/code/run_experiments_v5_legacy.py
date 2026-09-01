@@ -1,3 +1,7 @@
+"""LEGACY v5 runner - DO NOT reuse for the audited numbers.
+Uses the withdrawn step=2 sampler (spurious crossover at N>6);
+use AUDIT_v6_full_rerun.py for the audited v6 results."""
+
 #!/usr/bin/env python3
 """
 SGOED v5: Complete Experiments for Paper
@@ -9,7 +13,7 @@ This script runs all the experiments reported in the v5 paper:
 3. N=8 Parameter Tuning (g=0.8, 1.05, 1.10, 1.15)
 4. Statistical Significance Test (paired t-test d=3 vs d=4)
 
-Usage: python run_experiments.py
+Usage: python run_experiments_v5_legacy.py
 """
 
 import numpy as np

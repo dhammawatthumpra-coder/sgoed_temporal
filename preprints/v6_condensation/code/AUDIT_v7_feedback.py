@@ -14,7 +14,7 @@ Observables per config (trajectory mean over measurement window, 5 seeds):
   Y_max_extent     — largest Y extent (does Y blow up under back-reaction?)
 """
 import sys, os, json, time
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'code'))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sgoed_core_v7 import run_simulation
 import numpy as np
 

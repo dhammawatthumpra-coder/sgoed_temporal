@@ -63,4 +63,4 @@
 - พบกับดักใหม่ → เพิ่มแถวในตารางนี้ (ฉบับเต็ม) → ซิงก์ย่อลง manuscript Appendix B (ฉบับตีพิมพ์ 8 ตัว) → ถ้า toolbox ต้องรู้ ก็เพิ่ม case ใน self-test ของ `audit_gates.py`
 - ทุกผลลบที่เจอ = ผลงาน (บันทึก ไม่ใช่ซ่อน) — ตามธรรมเนียมของโปรเจกต์
 
-*อ้างอิงตัวเลข: notes อัปเดต 1–17 ใน `matrix/SGOED_TIME_EMERGENCE_SUMMARY.md`, `SGOED_PROJECT_SUMMARY.md`, และ scripts `audit_evidence/`*
+*อ้างอิงตัวเลข: notes อัปเดต 1–17 ใน `notes/SGOED_TIME_EMERGENCE_SUMMARY.md`, `notes/SGOED_PROJECT_SUMMARY.md`, และ scripts `audit_evidence/`*

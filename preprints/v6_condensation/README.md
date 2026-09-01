@@ -34,7 +34,7 @@ LICENSE, CITATION.cff
 code/
   sgoed_core_v6.py      correctness-first v6 engine (delta sampler, full-action check)
   sgoed_core_v7.py      v7 core (back-reaction; used by the audit scripts)
-  run_experiments.py    original runner
+  run_experiments_v5_legacy.py   *LEGACY v5 runner (withdrawn sampler — do not reuse)*
   AUDIT_v6_full_rerun.py    audited re-run (headline numbers)
   AUDIT_v7_feedback.py      feed-back audit (bistability/hysteresis)
 results/
