@@ -1,58 +1,19 @@
-\documentclass[12pt,a4paper]{article}
+\section{The Arrow of Time Is Not in the
+Ensemble}\label{the-arrow-of-time-is-not-in-the-ensemble}
 
-% Packages
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{calc}
-\newcounter{none}
-\providecommand{\real}[1]{#1}
-\usepackage{geometry}
-\usepackage{xcolor}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{enumitem}
-\usepackage{url}
-\usepackage{doi}
+\subsection{An Audited Toy-Model Quest across Equilibrium Matrices,
+Sequential Growth, and Causal Sets (SGOED
+V7)}\label{an-audited-toy-model-quest-across-equilibrium-matrices-sequential-growth-and-causal-sets-sgoed-v7}
 
-\geometry{margin=1in}
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\textbf{Author:} Sutipong Chanpengpad \emph{Independent Researcher,
+Chiang Rai, Thailand} Email: \texttt{dhammawatthumpra@gmail.com} ORCID:
+\href{https://orcid.org/0009-0001-4069-8576}{0009-0001-4069-8576}
 
-% allow inline \texttt (code/paths) to break at any character
-\makeatletter
-\renewcommand{\texttt}[1]{{\ttfamily\hyphenchar\font=`\-\relax #1}}
-\makeatother
-\emergencystretch=2em
+\textbf{Date:} August 2026
 
-% Theorem environments
-\newtheorem{definition}{Definition}
-\newtheorem{proposition}{Proposition}
-\newtheorem{remark}{Remark}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-% Title information
-\title{\textbf{The Arrow of Time Is Not in the Ensemble}\\[0.4cm]
-       \large An Audited Toy-Model Quest across Equilibrium Matrices,
-       Sequential Growth, and Causal Sets (SGOED V7)}
-
-\author{Sutipong Chanpengpad\\
-\small Independent Researcher, Chiang Rai, Thailand\\
-\small \texttt{dhammawatthumpra@gmail.com}\\
-\small \href{https://orcid.org/0009-0001-4069-8576}{ORCID: 0009-0001-4069-8576}}
-
-\date{\today}
-
-\begin{document}
-
-\maketitle
-
-\begin{abstract}
-label{abstract}
+\subsection{Abstract}\label{abstract}
 
 We ask a focused question in a toy universe of coupled
 matrix/graph/causal-set models: can the arrow of time arise from the
@@ -81,7 +42,7 @@ null-compatible at equilibrium Monte Carlo. In contrast, three
   contraction map induced by alignment to the past-mean direction
   (prefix-sum coupling).
 \item
-  \textbf{Non-equilibrium upwind transport} --- a directed source$\rightarrow$sink
+  \textbf{Non-equilibrium upwind transport} --- a directed source→sink
   flow produces a \(5000\times\)--\(6000\times\) extent decay with
   current \(J\approx +5.77\pm0.02\) (8 seeds), reversal-symmetric
   (\(-6.03\)) and null-discriminating (\(J\approx 0\)).
@@ -125,21 +86,81 @@ reproduced deterministically across seeds --- not a claim about
 fundamental physics.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-\end{abstract}
 
-\section{Introduction}\label{introduction}
+\subsection{Table of Contents}\label{table-of-contents}
+
+\begin{itemize}
+\tightlist
+\item
+  \hyperref[1-introduction]{1. Introduction}
+\item
+  \hyperref[2-models-and-observables]{2. Models and Observables}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \hyperref[21-the-matrix-unit-v7-core]{2.1 The matrix unit (v7 core)}
+  \item
+    \hyperref[22-growth-transport-and-posets]{2.2 Growth, transport, and
+    posets}
+  \item
+    \hyperref[23-observables]{2.3 Observables}
+  \end{itemize}
+\item
+  \hyperref[3-the-six-step-audit]{3. The Six-Step Audit}
+\item
+  \hyperref[4-results]{4. Results}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \hyperref[41-equilibrium-is-time-symmetric]{4.1 Equilibrium is
+    time-symmetric}
+  \item
+    \hyperref[42-route-1-past-hypothesis]{4.2 Route 1: Past Hypothesis}
+  \item
+    \hyperref[43-route-2-sequential-growth-and-its-mechanism]{4.3 Route
+    2: Sequential growth and its mechanism}
+  \item
+    \hyperref[44-route-3-non-equilibrium-upwind-transport]{4.4 Route 3:
+    Non-equilibrium upwind transport}
+  \item
+    \hyperref[45-the-4d-question-matrix-spontaneous-symmetry-breaking]{4.5
+    The 4D question: matrix spontaneous symmetry breaking}
+  \item
+    \hyperref[46-causal-set-dimensions-percolation-negative-light-cone-invariance]{4.6
+    Causal-set dimensions: percolation negative, light-cone invariance}
+  \item
+    \hyperref[47-spectral-dimension-on-flow-networks]{4.7 Spectral
+    dimension on flow networks}
+  \end{itemize}
+\item
+  \hyperref[5-discussion]{5. Discussion}
+\item
+  \hyperref[6-conclusion]{6. Conclusion}
+\item
+  \hyperref[appendix-a-reproducibility]{Appendix A: Reproducibility}
+\item
+  \hyperref[appendix-b-trap-catalog]{Appendix B: Trap Catalog}
+\item
+  \hyperref[references]{References}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction}\label{introduction}
 
 The question of where the arrow of time comes from has been posed across
-philosophy {[}\cite{page_wootters_1983}, \cite{barbour_1999},
-\cite{rovelli_2018}{]}, thermodynamics, and relational physics
-{[}\cite{connes_rovelli_1994}, \cite{rovelli_rqm_1996}{]}. Our working hypothesis,
-following the Structural Time Framework {[}\cite{chanpengpad_stf}{]} and
-its SGOED implementation {[}\cite{chanpengpad_sgoed_v2}{]}, is relational: time
+philosophy {[}\hyperref[ref-1]{1}, \hyperref[ref-9]{9},
+\hyperref[ref-10]{10}{]}, thermodynamics, and relational physics
+{[}\hyperref[ref-2]{2}, \hyperref[ref-5]{5}{]}. Our working hypothesis,
+following the Structural Time Framework {[}\hyperref[ref-6]{6}{]} and
+its SGOED implementation {[}\hyperref[ref-7]{7}{]}, is relational: time
 might emerge from the \emph{structure} of a pre-temporal system rather
 than being inserted as a parameter.
 
 The project evolved through many constructions --- matrix models with an
-observer system {[}\cite{chanpengpad_sgoed_v2}{]}, graphs, hypergraphs,
+observer system {[}\hyperref[ref-7]{7}{]}, graphs, hypergraphs,
 ecosystems, hybrids --- and each produced metrics that ``looked
 directional.'' Exactly eleven of them collapsed under scrutiny: they
 were histogram artifacts, labeling-dependent, null-compatible, or
@@ -172,15 +193,15 @@ public scripts (Appendix \hyperref[appendix-a-reproducibility]{A}).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Models and Observables}\label{models-and-observables}
+\subsection{2. Models and Observables}\label{models-and-observables}
 
-\subsection{1 The matrix unit (v7
+\subsubsection{2.1 The matrix unit (v7
 core)}\label{the-matrix-unit-v7-core}
 
 A unit holds real symmetric matrices \(X = (X^1,\dots,X^D)\) of size
 \(N\times N\) (``system'') and \(Y = (Y^1,\dots,Y^d)\) (``observer'').
 The local action \(S_X + S_Y + S_{\mathrm{coup}}\) (all terms of the
-IKKT-like family {[}\cite{ishibashi_kawai_kitazawa_tsuchiya_1997}{]} with stability gates) is
+IKKT-like family {[}\hyperref[ref-15]{15}{]} with stability gates) is
 
 \[S = \sum_{\mu<\nu}\mathrm{Tr}([X_\mu,X_\nu][X_\mu,X_\nu]^T) + \sum_\mu \lambda\big(\mathrm{Tr}(X_\mu^2)-Nr_0^2\big)^2 \ -\ g_{XY}\sum_\mu \hat v_\mu^2\,\mathrm{Tr}(X_\mu^4),\]
 
@@ -191,13 +212,13 @@ is the observer direction. The coupling
 aligned with \(\hat v\) to large extent \(\mathrm{Tr}(X_\mu^2)/N\) --- a
 \emph{discrete} winner-take-all choice among \(D\) dimensions
 (condensation ratio \(\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23\),
-\(\sim 60\sigma\) over baseline {[}\cite{chanpengpad_sgoed_v2}{]}), with
+\(\sim 60\sigma\) over baseline {[}\hyperref[ref-7]{7}{]}), with
 first-order bistability/hysteresis (audited scripts
 \texttt{AUDIT\_v7\_hysteresis*} in \texttt{audit\_evidence/}; see also
 the v6 preprint). This mechanism is the reproducible core of the
 project; it picks \emph{a} direction but does not create \emph{flow}.
 
-\subsection{2 Growth, transport, and
+\subsubsection{2.2 Growth, transport, and
 posets}\label{growth-transport-and-posets}
 
 Three process constructions were added on top of the unit:
@@ -205,7 +226,7 @@ Three process constructions were added on top of the unit:
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Sequential growth (CSG-style {[}\cite{rideout_sorkin_2000}{]}):}
+  \textbf{Sequential growth (CSG-style {[}\hyperref[ref-11]{11}{]}):}
   units are born one at a time; past units are frozen; the newborn
   thermalizes against the frozen past with coupling
   \(S_{\mathrm{inter}} = -g\,\hat v_u\cdot \big(\sum_{j<u}\hat v_j\big)\)
@@ -218,7 +239,7 @@ Three process constructions were added on top of the unit:
   (\(F_u \propto g_t X_{u-1} - g_t X_u\)); updates are overdamped
   Langevin with temperature \(T\).
 \item
-  \textbf{Causal sets / posets} {[}\cite{sorkin_2005}{]}: relations
+  \textbf{Causal sets / posets} {[}\hyperref[ref-12]{12}{]}: relations
   between births are defined either probabilistically (Bernoulli links +
   transitive closure), or geometrically from matrix state --- unit
   \(u\prec k\) iff \(|\hat v_u\cdot \hat v_k|>\theta\) \textbf{and}
@@ -227,14 +248,14 @@ Three process constructions were added on top of the unit:
   (\textbf{relational light-cone law}).
 \end{itemize}
 
-\subsection{3 Observables}\label{observables}
+\subsubsection{2.3 Observables}\label{observables}
 
 Directionality metrics: extent ratio
 \(R=\mathrm{ext}(X_{\max})/\overline{\mathrm{ext}}(X_{\neq\max})\);
 sign-count \(D\); relational dimension via relation fraction
 \(\rho = C/\binom{N}{2}\) calibrated against synthetic Minkowski
 sprinklings (\(d=1..8\), per-\(N\) recalibration to cancel finite-size
-box effects; estimator after Myrheim {[}\cite{myrhem_1978}{]});
+box effects; estimator after Myrheim {[}\hyperref[ref-13]{13}{]});
 spectral dimension \(d_s = -2\,d\ln P/d\ln t\) from the return
 probability \(P(t)=\mathrm{Tr}(T^t)/N\) of the (lazy) random walk;
 current
@@ -243,7 +264,7 @@ entropies and counts thereof.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{The Six-Step Audit}\label{the-six-step-audit}
+\subsection{3. The Six-Step Audit}\label{the-six-step-audit}
 
 Every observable in this project is passed through six gates before
 being reported. The gates, with their pass criteria (implemented as a
@@ -267,16 +288,16 @@ pass criterion
 precision) \\
 2. Significance & \(\ge 10\) seeds; mean and std stabilize (5 seeds are
 not enough --- a \(2.3\sigma\) effect fell to \(1.2\sigma\) in an
-earlier branch {[}\cite{chanpengpad_sgoed_v2}{]}) \\
-3. Null test & the effect separates from shuffle/baseline ($\gtrsim$ \(3\sigma\)
+earlier branch {[}\hyperref[ref-7]{7}{]}) \\
+3. Null test & the effect separates from shuffle/baseline (≳ \(3\sigma\)
 over the null spread) \\
 4. Labeling/permutation & the metric is invariant under relabeling of
 nodes \\
 5. Thermalization & the observable plateaus once \(n_{\mathrm{therm}}\)
 is sufficient (this gate alone reversed two conclusions in this project
 --- Section
-\hyperref[route-2-sequential-growth-and-its-mechanism]{4.3},
-\hyperref[route-1-past-hypothesis]{4.2}) \\
+\hyperref[43-route-2-sequential-growth-and-its-mechanism]{4.3},
+\hyperref[42-route-1-past-hypothesis]{4.2}) \\
 6. Mechanism & a stated explanation of \emph{why}, backed by the
 measured evidence \\
 \end{longtable}
@@ -300,12 +321,12 @@ failure modes this process caught.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Results}\label{results}
+\subsection{4. Results}\label{results}
 
-\subsection{1 Equilibrium is
+\subsubsection{4.1 Equilibrium is
 time-symmetric}\label{equilibrium-is-time-symmetric}
 
-In equilibrium Metropolis sampling {[}\cite{metropolis_1953}{]}, no
+In equilibrium Metropolis sampling {[}\hyperref[ref-8]{8}{]}, no
 final-state observable distinguishes a direction of time. Eleven
 observables were attempted across matrix, graph, hypergraph, and
 ecosystem variants: extent ratio \(R\), sign-count \(D\), relational
@@ -321,11 +342,11 @@ and inter-unit clock synchronization (alignment \(1.000\pm0.001\),
 null-passed) --- are real but \emph{static}: they fix a direction in
 space, not in time.
 
-\subsection{2 Route 1: Past
+\subsubsection{4.2 Route 1: Past
 Hypothesis}\label{route-1-past-hypothesis}
 
 Following the Boltzmann/Albert past-hypothesis program
-{[}\cite{albert_2000}{]}: a special low-entropy initial state relaxes
+{[}\hyperref[ref-16]{16}{]}: a special low-entropy initial state relaxes
 toward equilibrium, and the arrow is the measure of that relaxation. In
 the v7 matrix unit (\(N=4\), \(g_{XY}=0\), 3 seeds):
 
@@ -348,7 +369,7 @@ a random one, deterministically and monotonically (\(S\): \(344\to7\)).
 arrow's strength is inherited from the initial condition, not from the
 dynamics.
 
-\subsection{3 Route 2: Sequential growth and its
+\subsubsection{4.3 Route 2: Sequential growth and its
 mechanism}\label{route-2-sequential-growth-and-its-mechanism}
 
 \textbf{Result.} Units born one-by-one with frozen past (coupling
@@ -395,7 +416,7 @@ origin alignment was \(0.68\pm0.45\) (one of six seeds unconverged); at
 the propagated direction. Route 2 thus realizes the past-hypothesis
 arrow \emph{within} a growth process.
 
-\subsection{4 Route 3: Non-equilibrium upwind
+\subsubsection{4.4 Route 3: Non-equilibrium upwind
 transport}\label{route-3-non-equilibrium-upwind-transport}
 
 Overdamped Langevin on a chain of \(M=6\) units with upwind transfer,
@@ -421,7 +442,7 @@ current \(J\)
 \bottomrule\noalign{}
 \endlastfoot
 \textbf{REAL (pump@0)} &
-\([28.8,\allowbreak\,1.72,\allowbreak\,0.117,\allowbreak\,0.0247,\allowbreak\,0.020,\allowbreak\,0.005]\) &
+\([28.8,\,1.72,\,0.117,\,0.0247,\,0.020,\,0.005]\) &
 \textbf{\(+5.773\pm0.016\)} \\
 REVERSED (pump@5) & \(\sim[0.02,\dots,30.1]\) & \(-6.025\pm0.022\) \\
 NULL (no pump) & flat \(\sim0.1\) & \(+0.003\pm0.008\) \\
@@ -457,11 +478,11 @@ profiles occasionally violate monotonicity at the thermal floor
 with the residual explained as noise, consistently with the thermal
 floor.
 
-\subsection{5 The 4D question: matrix spontaneous symmetry
+\subsubsection{4.5 The 4D question: matrix spontaneous symmetry
 breaking}\label{the-4d-question-matrix-spontaneous-symmetry-breaking}
 
-Motivated by the Lorentzian IKKT programs {[}\cite{kim_nishimura_2011},
-\cite{kim_nishimura_2012}, \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}{]}, we asked whether the
+Motivated by the Lorentzian IKKT programs {[}\hyperref[ref-3]{3},
+\hyperref[ref-4]{4}, \hyperref[ref-15]{15}{]}, we asked whether the
 matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
 (and \(1{+}9\) at \(D=10\)) \emph{without} the engineered steering
 \(\hat v\). All four probes were audited at \(\ge 10\) seeds:
@@ -489,8 +510,8 @@ matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
   Lorentzian action is unbounded below --- extents run away
   (\(2000\)--\(8700\)) with no equilibrium (drift \(0.13\)--\(0.15\)).
   This mirrors the known fact that Lorentzian IKKT requires the fermion
-  determinant as regulator {[}\cite{kim_nishimura_2011},
-  \cite{kim_nishimura_2012}{]}; a CPU toy without it has no controlled
+  determinant as regulator {[}\hyperref[ref-3]{3},
+  \hyperref[ref-4]{4}{]}; a CPU toy without it has no controlled
   configuration space.
 \item
   \textbf{Bounded (saturating) noncommutativity}
@@ -504,9 +525,9 @@ matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
 \textbf{Conclusion:} no configuration without \(\hat v\) (or a signature
 choice) breaks SO(\(D\)) at toy scale; the only ``1+3'' obtainable is
 engineered. Consistent with the known physics: Euclidean IKKT does not
-dimensionally reduce {[}\cite{ishibashi_kawai_kitazawa_tsuchiya_1997}{]}.
+dimensionally reduce {[}\hyperref[ref-15]{15}{]}.
 
-\subsection{6 Causal-set dimensions: percolation negative,
+\subsubsection{4.6 Causal-set dimensions: percolation negative,
 light-cone
 invariance}\label{causal-set-dimensions-percolation-negative-light-cone-invariance}
 
@@ -627,7 +648,7 @@ state-scale self-calibration of the light speed,
 gives \(1.9\)). Spontaneous dimensional selection is absent in every
 construction tested in this work.
 
-\subsection{7 Spectral dimension on flow
+\subsubsection{4.7 Spectral dimension on flow
 networks}\label{spectral-dimension-on-flow-networks}
 
 On a chain (64 nodes), the symmetric random walk gives the clean
@@ -641,7 +662,7 @@ diverges} (\(14\to70\to278\to1110\)). Verdict: on a flow network \(d_s\)
 measures drift/transience, not geometry; spectral dimension is only
 well-defined on symmetric (equilibrium) structures --- unlike the
 plateau claims of causal-dynamical-triangulation programs
-{[}\cite{ambjorn_jurkiewicz_loll_2005}{]}, which evaluate \(d_s\) on equilibrium
+{[}\hyperref[ref-14]{14}{]}, which evaluate \(d_s\) on equilibrium
 geometries. This closes the ``\(4\)D via \(d_s\)'' hope with a mechanism
 (and re-derives the earlier null-compatibility of \(d_s\) in causal
 sets). \emph{Technical note:} chains/trees are bipartite, so the raw
@@ -651,7 +672,7 @@ documented trap, Appendix \hyperref[appendix-b-trap-catalog]{B}).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Discussion}\label{discussion}
+\subsection{5. Discussion}\label{discussion}
 
 \textbf{Engineered \(\ne\) emergence.} Every positive result here is a
 \emph{construction} whose asymmetry is inserted: a special initial
@@ -671,14 +692,14 @@ known physics (no fermion regulator; no metric; no seed concentration);
 condition for scale-invariant causal dimension} --- a falsifiable,
 transferable structural claim; (v) thermalization sufficiency is the
 single most dangerous gate (it reversed two conclusions here, and one
-earlier v5$\rightarrow$v6 correction {[}\cite{chanpengpad_sgoed_v2}{]}).
+earlier v5→v6 correction {[}\hyperref[ref-7]{7}{]}).
 
 \textbf{Limits.} \(N\le8\) matrices, \(\le1000\) events, single-machine
 seeds; the light-cone law's dimension parameterization was not optimized
 beyond the scans shown; no fermion-like term was ever included; the
 ``3'' of the physical dimensional reduction remains unexplained by any
 toy here (it requires the phase/fermionic machinery of the Lorentzian
-programs {[}\cite{kim_nishimura_2011}, \cite{kim_nishimura_2012}{]}).
+programs {[}\hyperref[ref-3]{3}, \hyperref[ref-4]{4}{]}).
 
 \textbf{What an emergent theory would need (candidate directions).} A
 regulated (bounded) noncommutativity that \emph{prefers} a subset of
@@ -688,7 +709,7 @@ audit, with \(N\to1000\) scale invariance as the acceptance gate.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Conclusion}\label{conclusion}
+\subsection{6. Conclusion}\label{conclusion}
 
 In the SGOED toy universe: the arrow of time is not in the equilibrium
 ensemble --- it enters through the initial condition or through
@@ -698,14 +719,14 @@ contraction to the past mean; upwind transport decay \(>5000\times\),
 \(J=+5.77\pm0.02\), reversal- and null-audited). The 4D question,
 pursued across matrix, bounded, dynamical, percolation, and spectral
 frameworks, yields a consistent negative --- with one structural
-discovery (light-cone locality $\rightarrow$ scale-invariant causal dimension) and
+discovery (light-cone locality → scale-invariant causal dimension) and
 one methodological deliverable (the six-step audit + trap catalog) that
 transfers to any future attempt.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\appendix
-\section{Reproducibility}\label{appendix-a-reproducibility}\begingroup\small\sloppy
+\subsection{Appendix A:
+Reproducibility}\label{appendix-a-reproducibility}
 
 All scripts run on CPU with fixed seeds; results JSONs saved alongside.
 Key parameters:
@@ -760,12 +781,12 @@ Key parameters:
   living summary (updates 13--14).
 \end{itemize}
 
-Seeds: \(\{42,\dots,53\}\) ($\geq$10 for fine grids; $\geq$6 elsewhere, as
+Seeds: \(\{42,\dots,53\}\) (≥10 for fine grids; ≥6 elsewhere, as
 reported). Detailed reproducibility notes and the full results chain
 (updates 1--12) in \texttt{matrix/SGOED\_TIME\_EMERGENCE\_SUMMARY.md};
 project context in \texttt{SGOED\_PROJECT\_SUMMARY.md}.
 
-\endgroup\section{Trap Catalog}\label{appendix-b-trap-catalog}
+\subsection{Appendix B: Trap Catalog}\label{appendix-b-trap-catalog}
 
 Every metric that ``looked exciting'' in this project failed exactly one
 of the gates below. The catalog is supplied as a structured table plus a
@@ -829,7 +850,62 @@ calibrate) to the estimator's convention \\
 The transferable lesson of the whole quest: \textbf{a metric is a
 hypothesis about an observable, and each gate above is a way it can be
 falsified.}
-\bibliographystyle{plain}
-\bibliography{references}
 
-\end{document}
+\subsection{References}\label{references}
+
+{[}1{]} Page, D. N., \& Wootters, W. K. (1983). Evolution without
+evolution: Dynamics described by stationary observables. \emph{Physical
+Review D}, 27(12), 2885--2892.
+
+{[}2{]} Connes, A., \& Rovelli, C. (1994). Von Neumann algebra
+automorphisms and time-thermodynamics relation. \emph{Classical and
+Quantum Gravity}, 11(12), 2899--2918.
+
+{[}3{]} Kim, S.-W., Nishimura, J., \& Tsuchiya, A. (2012). Expanding
+(3+1)-dimensional universe from a Lorentzian matrix model for
+superstring theory in (9+1) dimensions. \emph{Physical Review Letters},
+108(1), 011601.
+
+{[}4{]} Kim, S.-W., Nishimura, J., \& Tsuchiya, A. (2012). Late time
+behaviors of the expanding universe in the IIB matrix model.
+\emph{Journal of High Energy Physics}, 2012(10), 147.
+
+{[}5{]} Rovelli, C. (1996). Relational quantum mechanics.
+\emph{International Journal of Theoretical Physics}, 35(8), 1637--1678.
+
+{[}6{]} Chanpengpad, S. (2026). \emph{Structural Time Framework}.
+Zenodo.
+
+{[}7{]} Chanpengpad, S. (2026). \emph{SGOED: An Atemporal Matrix
+Formalism for Stability-Gated Crystallization and Aggregation (Phase
+1--2)}. Zenodo.
+\href{https://doi.org/10.5281/zenodo.21786260}{doi:10.5281/zenodo.21786260}
+
+{[}8{]} Metropolis, N., et al.~(1953). Equation of state calculations by
+fast computing machines. \emph{Journal of Chemical Physics}, 21(6),
+1087--1092.
+
+{[}9{]} Barbour, J. (1999). \emph{The End of Time}. Oxford University
+Press.
+
+{[}10{]} Rovelli, C. (2018). \emph{The Order of Time}. Riverhead Books.
+
+{[}11{]} Rideout, D. P., \& Sorkin, R. D. (2000). Classical sequential
+growth dynamics for causal sets. \emph{Physical Review D}, 61(2),
+024002.
+
+{[}12{]} Sorkin, R. D. (2005). Causal sets: Discrete gravity. In
+\emph{Lectures on Quantum Gravity} (pp.~305--327). Springer.
+
+{[}13{]} Myrheim, J. (1978). Statistical geometry. CERN preprint
+TH-2538.
+
+{[}14{]} Ambjørn, J., Jurkiewicz, J., \& Loll, R. (2005). Reconstructing
+the universe. \emph{Physical Review D}, 72(6), 064014.
+
+{[}15{]} Ishibashi, N., Kawai, H., Kitazawa, Y., \& Tsuchiya, A. (1997).
+A large-\(N\) reduced model as superstring. \emph{Nuclear Physics B},
+498(1--2), 467--491.
+
+{[}16{]} Albert, D. Z. (2000). \emph{Time and Chance}. Harvard
+University Press.

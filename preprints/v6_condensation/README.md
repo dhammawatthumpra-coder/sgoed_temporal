@@ -7,7 +7,7 @@ $-g_{XY}\,\hat v_\mu^2\,\mathrm{Tr}(X_\mu^4)$, with IKKT-like stability gates.
 ## Headline results (audited in the manuscript)
 
 - Eigenvalue **condensation ratio** $4.55\pm0.35$ vs baseline $1.10\pm0.05$
-  (~60σ); $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23$ (rank-1).
+  (~60σ); $\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 20$ (rank-1).
 - Robust healthy emergence for $d\in\{2..5\}$, $N\in\{4..16\}$ (a
   larger-$N$ extension to $N\in\{9,10,12,14,16\}$, Section 4.3), fixed
   $g_{XY}=0.8$; alignment of temporal direction with observer direction =

@@ -748,6 +748,16 @@ Key parameters:
   bistability/hysteresis claim of Section 2.1 is backed by
   \texttt{audit\_evidence/code/AUDIT\_v7\_hysteresis.py} + its result
   JSON.
+\item
+  \textbf{Self-tuning variants audited (negative, §4.5--4.6):}
+  degree-feedback (SOC-style, \texttt{code/step\_growth\_soc.py}) and
+  curvature-feedback (\texttt{c\_eff},
+  \texttt{code/step\_growth\_ceff.py}) growth laws fail the
+  scale-invariance gate (std across \(N\) of 0.25--1.09 vs the
+  \(\le0.05\) pass bound); per-config results in
+  \texttt{code/step\_growth\_soc\_results.json} and
+  \texttt{code/step\_growth\_ceff\_results.json}, full record in the
+  living summary (updates 13--14).
 \end{itemize}
 
 Seeds: \(\{42,\dots,53\}\) ($\geq$10 for fine grids; $\geq$6 elsewhere, as
