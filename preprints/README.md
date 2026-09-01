@@ -9,7 +9,7 @@ full live workspace remains in the repo root (`code/`, `matrix/`, …).
 | Folder | Manuscript | Content |
 |---|---|---|
 | [`v6_condensation/`](v6_condensation/) | manuscript_v6 (md/tex/pdf) | Matrix observer coupling: condensation, bistability, hysteresis (Part 1) |
-| [`v7_arrow_of_time/`](v7_arrow_of_time/) | manuscript_v7 (md) | The arrow-of-time quest: equilibrium symmetry, 3 process routes, 4D audit, light-cone invariance (Part 2) |
+| [`v7_arrow_of_time/`](v7_arrow_of_time/) | manuscript_v7 (md/tex/pdf) | The arrow-of-time quest: equilibrium symmetry, 3 process routes, 4D audit, light-cone invariance (Part 2) |
 
 **Relationship between the two:** v6 establishes the reproducible core
 (eigenvalue condensation as a discrete direction choice, ~60σ over baseline).
