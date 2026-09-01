@@ -125,19 +125,19 @@ fundamental physics.
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 \end{abstract}
 
-\section{. Introduction}\label{introduction}
+\section{Introduction}\label{introduction}
 
 The question of where the arrow of time comes from has been posed across
-philosophy [\cite{page_wootters_1983}, \cite{barbour_1999},
-\cite{rovelli_2018}], thermodynamics, and relational physics
-[\cite{connes_rovelli_1994}, \cite{rovelli_rqm_1996}]. Our working hypothesis,
-following the Structural Time Framework [\cite{chanpengpad_stf}] and
-its SGOED implementation [\cite{chanpengpad_sgoed_v2}], is relational: time
+philosophy \cite{page_wootters_1983}, \cite{barbour_1999},
+\cite{rovelli_2018}, thermodynamics, and relational physics
+\cite{connes_rovelli_1994}, \cite{rovelli_rqm_1996}. Our working hypothesis,
+following the Structural Time Framework \cite{chanpengpad_stf} and
+its SGOED implementation \cite{chanpengpad_sgoed_v2}, is relational: time
 might emerge from the \emph{structure} of a pre-temporal system rather
 than being inserted as a parameter.
 
 The project evolved through many constructions --- matrix models with an
-observer system [\cite{chanpengpad_sgoed_v2}], graphs, hypergraphs,
+observer system \cite{chanpengpad_sgoed_v2}, graphs, hypergraphs,
 ecosystems, hybrids --- and each produced metrics that ``looked
 directional.'' Exactly eleven of them collapsed under scrutiny: they
 were histogram artifacts, labeling-dependent, null-compatible, or
@@ -170,7 +170,7 @@ public scripts (Appendix \hyperref[appendix-a-reproducibility]{A}).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{. Models and Observables}\label{models-and-observables}
+\section{Models and Observables}\label{models-and-observables}
 
 \subsection{The matrix unit (v7
 core)}\label{the-matrix-unit-v7-core}
@@ -178,7 +178,7 @@ core)}\label{the-matrix-unit-v7-core}
 A unit holds real symmetric matrices \(X = (X^1,\dots,X^D)\) of size
 \(N\times N\) (``system'') and \(Y = (Y^1,\dots,Y^d)\) (``observer'').
 The local action \(S_X + S_Y + S_{\mathrm{coup}}\) (all terms of the
-IKKT-like family [\cite{ishibashi_kawai_kitazawa_tsuchiya_1997}] with stability gates) is
+IKKT-like family \cite{ishibashi_kawai_kitazawa_tsuchiya_1997} with stability gates) is
 
 \[S = \sum_{\mu<\nu}\mathrm{Tr}([X_\mu,X_\nu][X_\mu,X_\nu]^T) + \sum_\mu \lambda\big(\mathrm{Tr}(X_\mu^2)-Nr_0^2\big)^2 \ -\ g_{XY}\sum_\mu \hat v_\mu^2\,\mathrm{Tr}(X_\mu^4),\]
 
@@ -189,7 +189,7 @@ is the observer direction. The coupling
 aligned with \(\hat v\) to large extent \(\mathrm{Tr}(X_\mu^2)/N\) --- a
 \emph{discrete} winner-take-all choice among \(D\) dimensions
 (condensation ratio \(\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23\),
-\(\sim 60\sigma\) over baseline [\cite{chanpengpad_sgoed_v2}]), with
+\(\sim 60\sigma\) over baseline \cite{chanpengpad_sgoed_v2}), with
 first-order bistability/hysteresis (audited scripts
 \texttt{AUDIT\_v7\_hysteresis*} in \texttt{audit\_evidence/}; see also
 the v6 preprint). This mechanism is the reproducible core of the
@@ -203,7 +203,7 @@ Three process constructions were added on top of the unit:
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Sequential growth (CSG-style [\cite{rideout_sorkin_2000}]):}
+  \textbf{Sequential growth (CSG-style \cite{rideout_sorkin_2000}):}
   units are born one at a time; past units are frozen; the newborn
   thermalizes against the frozen past with coupling
   \(S_{\mathrm{inter}} = -g\,\hat v_u\cdot \big(\sum_{j<u}\hat v_j\big)\)
@@ -216,7 +216,7 @@ Three process constructions were added on top of the unit:
   (\(F_u \propto g_t X_{u-1} - g_t X_u\)); updates are overdamped
   Langevin with temperature \(T\).
 \item
-  \textbf{Causal sets / posets} [\cite{sorkin_2005}]: relations
+  \textbf{Causal sets / posets} \cite{sorkin_2005}: relations
   between births are defined either probabilistically (Bernoulli links +
   transitive closure), or geometrically from matrix state --- unit
   \(u\prec k\) iff \(|\hat v_u\cdot \hat v_k|>\theta\) \textbf{and}
@@ -232,7 +232,7 @@ Directionality metrics: extent ratio
 sign-count \(D\); relational dimension via relation fraction
 \(\rho = C/\binom{N}{2}\) calibrated against synthetic Minkowski
 sprinklings (\(d=1..8\), per-\(N\) recalibration to cancel finite-size
-box effects; estimator after Myrheim [\cite{myrhem_1978}]);
+box effects; estimator after Myrheim \cite{myrhem_1978});
 spectral dimension \(d_s = -2\,d\ln P/d\ln t\) from the return
 probability \(P(t)=\mathrm{Tr}(T^t)/N\) of the (lazy) random walk;
 current
@@ -241,7 +241,7 @@ entropies and counts thereof.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{. The Six-Step Audit}\label{the-six-step-audit}
+\section{The Six-Step Audit}\label{the-six-step-audit}
 
 Every observable in this project is passed through six gates before
 being reported. The gates, with their pass criteria (implemented as a
@@ -265,7 +265,7 @@ pass criterion
 precision) \\
 2. Significance & \(\ge 10\) seeds; mean and std stabilize (5 seeds are
 not enough --- a \(2.3\sigma\) effect fell to \(1.2\sigma\) in an
-earlier branch [\cite{chanpengpad_sgoed_v2}]) \\
+earlier branch \cite{chanpengpad_sgoed_v2}) \\
 3. Null test & the effect separates from shuffle/baseline ($\gtrsim$ \(3\sigma\)
 over the null spread) \\
 4. Labeling/permutation & the metric is invariant under relabeling of
@@ -298,12 +298,12 @@ failure modes this process caught.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{. Results}\label{results}
+\section{Results}\label{results}
 
 \subsection{Equilibrium is
 time-symmetric}\label{equilibrium-is-time-symmetric}
 
-In equilibrium Metropolis sampling [\cite{metropolis_1953}], no
+In equilibrium Metropolis sampling \cite{metropolis_1953}, no
 final-state observable distinguishes a direction of time. Eleven
 observables were attempted across matrix, graph, hypergraph, and
 ecosystem variants: extent ratio \(R\), sign-count \(D\), relational
@@ -323,7 +323,7 @@ space, not in time.
 Hypothesis}\label{route-1-past-hypothesis}
 
 Following the Boltzmann/Albert past-hypothesis program
-[\cite{albert_2000}]: a special low-entropy initial state relaxes
+\cite{albert_2000}: a special low-entropy initial state relaxes
 toward equilibrium, and the arrow is the measure of that relaxation. In
 the v7 matrix unit (\(N=4\), \(g_{XY}=0\), 3 seeds):
 
@@ -458,8 +458,8 @@ floor.
 \subsection{The 4D question: matrix spontaneous symmetry
 breaking}\label{the-4d-question-matrix-spontaneous-symmetry-breaking}
 
-Motivated by the Lorentzian IKKT programs [\cite{kim_nishimura_2011},
-\cite{kim_nishimura_2012}, \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}], we asked whether the
+Motivated by the Lorentzian IKKT programs \cite{kim_nishimura_2011},
+\cite{kim_nishimura_2012}, \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}, we asked whether the
 matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
 (and \(1{+}9\) at \(D=10\)) \emph{without} the engineered steering
 \(\hat v\). All four probes were audited at \(\ge 10\) seeds:
@@ -487,8 +487,8 @@ matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
   Lorentzian action is unbounded below --- extents run away
   (\(2000\)--\(8700\)) with no equilibrium (drift \(0.13\)--\(0.15\)).
   This mirrors the known fact that Lorentzian IKKT requires the fermion
-  determinant as regulator [\cite{kim_nishimura_2011},
-  \cite{kim_nishimura_2012}]; a CPU toy without it has no controlled
+  determinant as regulator \cite{kim_nishimura_2011},
+  \cite{kim_nishimura_2012}; a CPU toy without it has no controlled
   configuration space.
 \item
   \textbf{Bounded (saturating) noncommutativity}
@@ -502,7 +502,7 @@ matrix unit itself can spontaneously pick a \(1{+}3\) split at \(D=4\)
 \textbf{Conclusion:} no configuration without \(\hat v\) (or a signature
 choice) breaks SO(\(D\)) at toy scale; the only ``1+3'' obtainable is
 engineered. Consistent with the known physics: Euclidean IKKT does not
-dimensionally reduce [\cite{ishibashi_kawai_kitazawa_tsuchiya_1997}].
+dimensionally reduce \cite{ishibashi_kawai_kitazawa_tsuchiya_1997}.
 
 \subsection{Causal-set dimensions: percolation negative,
 light-cone
@@ -639,7 +639,7 @@ diverges} (\(14\to70\to278\to1110\)). Verdict: on a flow network \(d_s\)
 measures drift/transience, not geometry; spectral dimension is only
 well-defined on symmetric (equilibrium) structures --- unlike the
 plateau claims of causal-dynamical-triangulation programs
-[\cite{ambjorn_jurkiewicz_loll_2005}], which evaluate \(d_s\) on equilibrium
+\cite{ambjorn_jurkiewicz_loll_2005}, which evaluate \(d_s\) on equilibrium
 geometries. This closes the ``\(4\)D via \(d_s\)'' hope with a mechanism
 (and re-derives the earlier null-compatibility of \(d_s\) in causal
 sets). \emph{Technical note:} chains/trees are bipartite, so the raw
@@ -649,7 +649,7 @@ documented trap, Appendix \hyperref[appendix-b-trap-catalog]{B}).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{. Discussion}\label{discussion}
+\section{Discussion}\label{discussion}
 
 \textbf{Engineered \(\ne\) emergence.} Every positive result here is a
 \emph{construction} whose asymmetry is inserted: a special initial
@@ -669,14 +669,14 @@ known physics (no fermion regulator; no metric; no seed concentration);
 condition for scale-invariant causal dimension} --- a falsifiable,
 transferable structural claim; (v) thermalization sufficiency is the
 single most dangerous gate (it reversed two conclusions here, and one
-earlier v5$\rightarrow$v6 correction [\cite{chanpengpad_sgoed_v2}]).
+earlier v5$\rightarrow$v6 correction \cite{chanpengpad_sgoed_v2}).
 
 \textbf{Limits.} \(N\le8\) matrices, \(\le1000\) events, single-machine
 seeds; the light-cone law's dimension parameterization was not optimized
 beyond the scans shown; no fermion-like term was ever included; the
 ``3'' of the physical dimensional reduction remains unexplained by any
 toy here (it requires the phase/fermionic machinery of the Lorentzian
-programs [\cite{kim_nishimura_2011}, \cite{kim_nishimura_2012}]).
+programs \cite{kim_nishimura_2011}, \cite{kim_nishimura_2012}).
 
 \textbf{What an emergent theory would need (candidate directions).} A
 regulated (bounded) noncommutativity that \emph{prefers} a subset of
@@ -686,7 +686,7 @@ audit, with \(N\to1000\) scale invariance as the acceptance gate.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{. Conclusion}\label{conclusion}
+\section{Conclusion}\label{conclusion}
 
 In the SGOED toy universe: the arrow of time is not in the equilibrium
 ensemble --- it enters through the initial condition or through

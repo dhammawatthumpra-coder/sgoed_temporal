@@ -27,8 +27,8 @@ if i_ref != -1:
     BODY = BODY[:i_ref].rstrip()
 
 # --- 4. promote headings + strip manual numbers ---
-BODY = re.sub(r"\\subsection\{\d+(?:\.\d+)*\s*", r"\\subsection{", BODY)
-BODY = re.sub(r"\\subsubsection\{\d+(?:\.\d+)*\s*", r"\\subsubsection{", BODY)
+BODY = re.sub(r"\\subsection\{[\d.]+\s*", r"\\subsection{", BODY)
+BODY = re.sub(r"\\subsubsection\{[\d.]+\s*", r"\\subsubsection{", BODY)
 BODY = BODY.replace("\\subsection{", "\\section{").replace("\\subsubsection{", "\\subsection{")
 
 # --- 5. appendices (headings may be wrapped by pandoc -> allow \s+) ---
@@ -62,8 +62,8 @@ def repl(m):
 
 BODY = re.sub(r"\\hyperref\[ref-(\d+)\]\{\d+\}", repl, BODY)
 
-# remove pandoc's {[}/{]} bracket guards around the converted citations
-BODY = BODY.replace("{[}", "[").replace("{]}", "]")
+# remove pandoc's {[}/{]} bracket guards: \cite already produces its own [n]
+BODY = BODY.replace("{[}", "").replace("{]}", "")
 
 PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 
