@@ -1,4 +1,4 @@
-<!-- regenerated from manuscript_v6.tex on 2026-09-01 — edit the .tex, then rebuild -->
+<!-- regenerated from manuscript_v6.tex by build/build_md.py -- edit the .tex (via the template), then rebuild -->
 
 # Temporal Emergence from Dynamical Observer Coupling: A Matrix Model for Observer-Dependent Symmetry Breaking
 **Version 6: Trajectory-Mean Analysis with Corrected Sampler**

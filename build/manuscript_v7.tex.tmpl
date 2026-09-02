@@ -110,8 +110,8 @@ the equilibrium ensemble; and 4D does not emerge spontaneously in any of
 the audited frameworks. The audit itself --- a six-step verification
 protocol and a trap catalog --- is the project's transferable
 contribution, shipped as a runnable toolbox
-(\texttt{code/audit\_gates.py}, Supplement A) with the full v8--v14
-evidence slice (\texttt{audit\_evidence/}).
+(<<FILE:audit_gates>>, Supplement A) with the full v8--v14
+evidence slice (<<DIR:evidence_dir>>).
 
 \textbf{Keywords:} arrow of time, matrix models, sequential growth,
 causal sets, spectral dimension, Monte Carlo audit, past hypothesis
@@ -191,7 +191,7 @@ aligned with \(\hat v\) to large extent \(\mathrm{Tr}(X_\mu^2)/N\) --- a
 (condensation ratio \(\lambda_{\max}/\lambda_{2\mathrm{nd}}\approx 23\),
 \(\sim 60\sigma\) over baseline \cite{chanpengpad_sgoed_v2}), with
 first-order bistability/hysteresis (audited scripts
-\texttt{AUDIT\_v7\_hysteresis*} in \texttt{audit\_evidence/}; see also the v6
+<<FILE:hysteresis_glob>><<IF:preprint>> in <<DIR:evidence_dir>><<ELSE>> at the repo root<<ENDIF>>; see also the v6
 preprint). This mechanism is the reproducible core of the project; it
 picks \emph{a} direction but does not create \emph{flow}.
 
@@ -245,7 +245,7 @@ entropies and counts thereof.
 
 Every observable in this project is passed through six gates before
 being reported. The gates, with their pass criteria (implemented as a
-runnable toolbox, \texttt{code/audit\_gates.py}, Supplement A):
+runnable toolbox, <<FILE:audit_gates>>, Supplement A):
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
@@ -714,69 +714,70 @@ Key parameters:
   v7 unit: \(N\le8\), \(D=2\), coupling \(g_{XY}=0.8\), gates
   \(\lambda=1\), \texttt{max\_extent=10}.
 \item
-  Past hypothesis: \texttt{code/step\_past\_hypothesis.py} (\(N=4\), 3
+  Past hypothesis: <<FILE:step_past_hypothesis>> (\(N=4\), 3
   seeds).
 \item
-  Sequential growth: \texttt{code/step\_sequential\_growth.py}
+  Sequential growth: <<FILE:step_sequential_growth>>
   (\(M=8..32\), \(g_{\mathrm{inter}}=20\), \(n_{\mathrm{therm}}=100\));
-  mechanism: \texttt{code/step\_growth\_mechanism.py}; past-hypothesis
-  variant: \texttt{code/step\_growth\_past\_hypothesis.py}
+  mechanism: <<FILE:step_growth_mechanism>>; past-hypothesis
+  variant: <<FILE:step_growth_past_hypothesis>>
   (\(n_{\mathrm{therm}}=120\)).
 \item
-  Transport: \texttt{code/step\_langevin\_transport\_tuned.py} +
-  \texttt{code/step\_transport\_robust.py} (8 seeds \(\times\) 500
+  Transport: <<FILE:step_langevin_transport_tuned>> +
+  <<FILE:step_transport_robust>> (8 seeds \(\times\) 500
   steps; scan \(g_{\mathrm{trans}}\times g_{\mathrm{sink}}\)).
 \item
-  4D probes: \texttt{code/sgoed\_matrix\_v15.py},
-  \texttt{code/step\_v15\_dynamical.py},
-  \texttt{code/step\_v15\_bounded.py}.
+  4D probes: <<FILE:sgoed_matrix_v15>>,
+  <<FILE:step_v15_dynamical>>,
+  <<FILE:step_v15_bounded>>.
 \item
-  Causal sets: \texttt{code/step\_causal\_set\_dmm.py},
-  \texttt{code/step\_causal\_set\_scale\_study.py} (bitset transitive
+  Causal sets: <<FILE:step_causal_set_dmm>>,
+  <<FILE:step_causal_set_scale_study>> (bitset transitive
   closure; per-\(N\) calibration),
-  \texttt{code/step\_growth\_lightcone.py},
-  \texttt{code/step\_lightcone\_followup.py}.
+  <<FILE:step_growth_lightcone>>,
+  <<FILE:step_lightcone_followup>>.
 \item
-  Spectral dimension: \texttt{code/step\_spectral\_dimension\_flow.py}
+  Spectral dimension: <<FILE:step_spectral_dimension_flow>>
   (lazy walk).
 \item
-  Audit toolbox (Supplement A): \texttt{code/audit\_gates.py} --- six
+  Audit toolbox (Supplement A): <<FILE:audit_gates>> --- six
   gates as reusable functions, with a self-test that demonstrates each
   trap class. The negative-evidence slice behind Sections 3/4.1/Appendix
-  B ships in \texttt{audit\_evidence/} (v8--v14 cores, audit scripts, results)
-  and the per-version notes in \texttt{notes/}. The
+  B ships in <<DIR:evidence_dir>> (v8--v14 cores, audit scripts, results)
+  and the per-version notes in <<DIR:version_notes_dir>>. The
   bistability/hysteresis claim of Section 2.1 is backed by
-  \texttt{audit\_evidence/code/AUDIT\_v7\_hysteresis.py} + its result JSON.
+  <<FILE:hysteresis_script>><<IF:preprint>> + its result JSON<<ELSE>> +
+  <<FILE:hysteresis_results>> (repo root)<<ENDIF>>.
 \item
   \textbf{Self-tuning variants audited:} degree-feedback (SOC-style,
-  \texttt{code/step\_growth\_soc.py}) fails the scale-invariance gate
+  <<FILE:step_growth_soc>>) fails the scale-invariance gate
   outright in all 7 configs (std across \(N\) of 0.25--1.09);
   curvature-feedback (\texttt{c\_eff},
-  \texttt{code/step\_growth\_ceff.py}) fails outright in 2 of 12
+  <<FILE:step_growth_ceff>>) fails outright in 2 of 12
   configs (std 0.45--0.48), while its 9 remaining non-control runs sit
   pinned at the calibration ceiling (\(d=8.00\), std \(=0\) --- a
   boundary artifact, 5 of them yielding NaN \(c_{\mathrm{eff}}\)
   statistics --- not genuine invariance); only the static-cone control
   passes genuinely (std 0.006). Per-config results:
-  \texttt{results/step\_growth\_soc\_results.json},
-  \texttt{results/step\_growth\_ceff\_results.json}; full record in the
+  <<FILE:step_growth_soc_results>>,
+  <<FILE:step_growth_ceff_results>>; full record in the
   living summary (updates 13--14).
 \end{itemize}
 
 Seeds: \(\{42,\dots,53\}\) ($\geq$10 for fine grids; $\geq$6 elsewhere, as
 reported). Detailed reproducibility notes and the full results chain
-(updates 1--17) in \texttt{notes/SGOED\_TIME\_EMERGENCE\_SUMMARY.md};
-project context in \texttt{notes/SGOED\_PROJECT\_SUMMARY.md}.
+(updates 1--17) in <<FILE:time_emergence_summary>>;
+project context in <<FILE:project_summary>>.
 
 \endgroup\section{Trap Catalog}\label{appendix-b-trap-catalog}
 
 Every metric that ``looked exciting'' in this project failed exactly one
 of the gates below. The catalog is supplied as a structured eight-trap
-table below plus a runnable toolbox (\texttt{code/audit\_gates.py},
+table below plus a runnable toolbox (<<FILE:audit_gates>>,
 Supplement A); the full \textbf{12}-trap catalog and an eight-step
 auditing workflow ship as Supplement B
-(\texttt{SUPPLEMENT\_B\_AUDIT\_HANDBOOK.md}); the v8--v14 scripts and
-results backing each row ship in \texttt{audit\_evidence/}.
+(<<FILE:supplement_b>>); the v8--v14 scripts and
+results backing each row ship in <<DIR:evidence_dir>>.
 
 {\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}

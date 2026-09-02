@@ -1,0 +1,236 @@
+# Single source of truth for every file/directory path referenced by the
+# manuscripts. Keys are referenced from build/manuscript_v7.tex.tmpl as
+# <<FILE:key>> (file) or <<DIR:key>> (directory) tokens.
+#
+#   root_path      path as rendered in the ROOT manuscript (relative to repo root)
+#   preprint_path  path as rendered in the preprint manuscript (relative to the
+#                  preprint folder)
+#   copy_from      single physical copy (root layout) — MUST exist
+#   copy_to        destination inside preprints/v7_arrow_of_time/ when building
+#                  the preprint bundle
+#   adapt          optional list of [find, replace] applied to the file content
+#                  when copying to the preprint (layout-specific lines, e.g.
+#                  sys.path pointing at ../code at root vs . in the bundle)
+
+# ---------- one-off files that exist identically in both layouts ----------
+
+audit_gates:
+  root_path: "code/audit_gates.py"
+  preprint_path: "code/audit_gates.py"
+  copy_from: "code/audit_gates.py"
+  copy_to: "code/audit_gates.py"
+
+supplement_b:
+  root_path: "SUPPLEMENT_B_AUDIT_HANDBOOK.md"
+  preprint_path: "SUPPLEMENT_B_AUDIT_HANDBOOK.md"
+  copy_from: "SUPPLEMENT_B_AUDIT_HANDBOOK.md"
+  copy_to: "SUPPLEMENT_B_AUDIT_HANDBOOK.md"
+
+# ---------- v7 experiment scripts: root keeps them in matrix/, the
+# preprint bundle self-contains them in code/. Six of them carry a
+# layout-specific sys.path line that must be adapted on copy. ----------
+
+step_past_hypothesis:
+  root_path: "matrix/step_past_hypothesis.py"
+  preprint_path: "code/step_past_hypothesis.py"
+  copy_from: "matrix/step_past_hypothesis.py"
+  copy_to: "code/step_past_hypothesis.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_sequential_growth:
+  root_path: "matrix/step_sequential_growth.py"
+  preprint_path: "code/step_sequential_growth.py"
+  copy_from: "matrix/step_sequential_growth.py"
+  copy_to: "code/step_sequential_growth.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_growth_mechanism:
+  root_path: "matrix/step_growth_mechanism.py"
+  preprint_path: "code/step_growth_mechanism.py"
+  copy_from: "matrix/step_growth_mechanism.py"
+  copy_to: "code/step_growth_mechanism.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_growth_past_hypothesis:
+  root_path: "matrix/step_growth_past_hypothesis.py"
+  preprint_path: "code/step_growth_past_hypothesis.py"
+  copy_from: "matrix/step_growth_past_hypothesis.py"
+  copy_to: "code/step_growth_past_hypothesis.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_causal_set_dmm:
+  root_path: "matrix/step_causal_set_dmm.py"
+  preprint_path: "code/step_causal_set_dmm.py"
+  copy_from: "matrix/step_causal_set_dmm.py"
+  copy_to: "code/step_causal_set_dmm.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_growth_lightcone:
+  root_path: "matrix/step_growth_lightcone.py"
+  preprint_path: "code/step_growth_lightcone.py"
+  copy_from: "matrix/step_growth_lightcone.py"
+  copy_to: "code/step_growth_lightcone.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_langevin_transport_tuned:
+  root_path: "matrix/step_langevin_transport_tuned.py"
+  preprint_path: "code/step_langevin_transport_tuned.py"
+  copy_from: "matrix/step_langevin_transport_tuned.py"
+  copy_to: "code/step_langevin_transport_tuned.py"
+  adapt:
+    - ['sys.path.insert(0, "../code")', 'sys.path.insert(0, ".")']
+
+step_transport_robust:
+  root_path: "matrix/step_transport_robust.py"
+  preprint_path: "code/step_transport_robust.py"
+  copy_from: "matrix/step_transport_robust.py"
+  copy_to: "code/step_transport_robust.py"
+
+sgoed_matrix_v15:
+  root_path: "matrix/sgoed_matrix_v15.py"
+  preprint_path: "code/sgoed_matrix_v15.py"
+  copy_from: "matrix/sgoed_matrix_v15.py"
+  copy_to: "code/sgoed_matrix_v15.py"
+
+step_v15_dynamical:
+  root_path: "matrix/step_v15_dynamical.py"
+  preprint_path: "code/step_v15_dynamical.py"
+  copy_from: "matrix/step_v15_dynamical.py"
+  copy_to: "code/step_v15_dynamical.py"
+
+step_v15_bounded:
+  root_path: "matrix/step_v15_bounded.py"
+  preprint_path: "code/step_v15_bounded.py"
+  copy_from: "matrix/step_v15_bounded.py"
+  copy_to: "code/step_v15_bounded.py"
+
+step_causal_set_scale_study:
+  root_path: "matrix/step_causal_set_scale_study.py"
+  preprint_path: "code/step_causal_set_scale_study.py"
+  copy_from: "matrix/step_causal_set_scale_study.py"
+  copy_to: "code/step_causal_set_scale_study.py"
+
+step_lightcone_followup:
+  root_path: "matrix/step_lightcone_followup.py"
+  preprint_path: "code/step_lightcone_followup.py"
+  copy_from: "matrix/step_lightcone_followup.py"
+  copy_to: "code/step_lightcone_followup.py"
+
+step_spectral_dimension_flow:
+  root_path: "matrix/step_spectral_dimension_flow.py"
+  preprint_path: "code/step_spectral_dimension_flow.py"
+  copy_from: "matrix/step_spectral_dimension_flow.py"
+  copy_to: "code/step_spectral_dimension_flow.py"
+
+step_growth_soc:
+  root_path: "matrix/step_growth_soc.py"
+  preprint_path: "code/step_growth_soc.py"
+  copy_from: "matrix/step_growth_soc.py"
+  copy_to: "code/step_growth_soc.py"
+
+step_growth_ceff:
+  root_path: "matrix/step_growth_ceff.py"
+  preprint_path: "code/step_growth_ceff.py"
+  copy_from: "matrix/step_growth_ceff.py"
+  copy_to: "code/step_growth_ceff.py"
+
+# ---------- result JSONs ----------
+
+step_growth_soc_results:
+  root_path: "matrix/step_growth_soc_results.json"
+  preprint_path: "results/step_growth_soc_results.json"
+  copy_from: "matrix/step_growth_soc_results.json"
+  copy_to: "results/step_growth_soc_results.json"
+
+step_growth_ceff_results:
+  root_path: "matrix/step_growth_ceff_results.json"
+  preprint_path: "results/step_growth_ceff_results.json"
+  copy_from: "matrix/step_growth_ceff_results.json"
+  copy_to: "results/step_growth_ceff_results.json"
+
+# ---------- hysteresis evidence: root keeps bare at repo root, the
+# preprint bundle files them under audit_evidence/ ----------
+
+hysteresis_script:
+  root_path: "AUDIT_v7_hysteresis.py"
+  preprint_path: "audit_evidence/code/AUDIT_v7_hysteresis.py"
+  copy_from: "AUDIT_v7_hysteresis.py"
+  copy_to: "audit_evidence/code/AUDIT_v7_hysteresis.py"
+
+hysteresis_results:
+  root_path: "AUDIT_v7_hysteresis_results.json"
+  preprint_path: "audit_evidence/results/AUDIT_v7_hysteresis_results.json"
+  copy_from: "AUDIT_v7_hysteresis_results.json"
+  copy_to: "audit_evidence/results/AUDIT_v7_hysteresis_results.json"
+
+# ---------- narrative summaries ----------
+
+time_emergence_summary:
+  root_path: "matrix/SGOED_TIME_EMERGENCE_SUMMARY.md"
+  preprint_path: "notes/SGOED_TIME_EMERGENCE_SUMMARY.md"
+  copy_from: "matrix/SGOED_TIME_EMERGENCE_SUMMARY.md"
+  copy_to: "notes/SGOED_TIME_EMERGENCE_SUMMARY.md"
+
+project_summary:
+  root_path: "SGOED_PROJECT_SUMMARY.md"
+  preprint_path: "notes/SGOED_PROJECT_SUMMARY.md"
+  copy_from: "SGOED_PROJECT_SUMMARY.md"
+  copy_to: "notes/SGOED_PROJECT_SUMMARY.md"
+
+v8_notes:
+  root_path: "matrix/SGOED_v8_relational_notes.md"
+  preprint_path: "notes/SGOED_v8_relational_notes.md"
+  copy_from: "matrix/SGOED_v8_relational_notes.md"
+  copy_to: "notes/SGOED_v8_relational_notes.md"
+
+v9_notes:
+  root_path: "matrix/SGOED_v9_hypergraph_notes.md"
+  preprint_path: "notes/SGOED_v9_hypergraph_notes.md"
+  copy_from: "matrix/SGOED_v9_hypergraph_notes.md"
+  copy_to: "notes/SGOED_v9_hypergraph_notes.md"
+
+v10_notes:
+  root_path: "matrix/SGOED_v10_ecosystem_notes.md"
+  preprint_path: "notes/SGOED_v10_ecosystem_notes.md"
+  copy_from: "matrix/SGOED_v10_ecosystem_notes.md"
+  copy_to: "notes/SGOED_v10_ecosystem_notes.md"
+
+v12_notes:
+  root_path: "matrix/SGOED_v12_graph_notes.md"
+  preprint_path: "notes/SGOED_v12_graph_notes.md"
+  copy_from: "matrix/SGOED_v12_graph_notes.md"
+  copy_to: "notes/SGOED_v12_graph_notes.md"
+
+v13_notes:
+  root_path: "matrix/SGOED_v13_asymmetric_notes.md"
+  preprint_path: "notes/SGOED_v13_asymmetric_notes.md"
+  copy_from: "matrix/SGOED_v13_asymmetric_notes.md"
+  copy_to: "notes/SGOED_v13_asymmetric_notes.md"
+
+v14_notes:
+  root_path: "matrix/SGOED_v14_notes.md"
+  preprint_path: "notes/SGOED_v14_notes.md"
+  copy_from: "matrix/SGOED_v14_notes.md"
+  copy_to: "notes/SGOED_v14_notes.md"
+
+# ---------- directory tokens (rendered as \texttt{<dir>} in the tex) ----------
+
+evidence_dir:
+  root_path: "matrix/"
+  preprint_path: "audit_evidence/"
+
+version_notes_dir:
+  root_path: "matrix/"
+  preprint_path: "notes/"
+
+# ---------- render-only token (a filename glob, not a single file) ----------
+
+hysteresis_glob:
+  root_path: "AUDIT_v7_hysteresis*"
+  preprint_path: "AUDIT_v7_hysteresis*"
