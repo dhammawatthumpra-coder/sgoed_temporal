@@ -1,9 +1,9 @@
 {
-  "title": "SGOED — The Arrow of Time Is Not in the Ensemble: An Audited Toy-Model Quest across Equilibrium Matrices, Sequential Growth, and Causal Sets (Preprint v7)",
-  "description": "SGOED_temporal — the time-emergent extension of the atemporal SGOED framework. Audited toy-model quest for the arrow of time. Core findings: (1) equilibrium Monte Carlo is time-symmetric — eleven structural observables (R, D, d_MM, d_s, G, cycle ratio, time-reversal, order, repulsion, dynamic order, entropy rate) all fail under a six-gate audit; (2) three process constructions give robust directional time — Past Hypothesis (rank-1 initial state: dS/S0=0.98, ~100× random), Sequential Growth (chain inheritance 1.000±0.000, deterministic, scale-free M=8–32; mechanism: contraction to the past mean; with a rank-1 frozen origin: 0.9995±0.0002), and Upwind Transport (decay 5849×, J=+5.773±0.016, reversal- and null-audited); (3) the 4D question closes negatively in every audited framework (matrix SSB, bounded noncommutativity, Lorentzian real-time dynamics, random percolation — whose \"d≈4 at N=250\" is a finite-size artifact —, and the audited self-tuning growth-law variants (degree- and curvature-feedback, Appendix A)); (4) one structural discovery: relational light-cone locality is the condition for scale-invariant causal dimension (std across N of 0.002–0.013 vs 0.26–0.82 for percolation), including a commutator-compatibility metric on real growth states (d≈3.5, std 0.008) — the dimension value remains parameter-steered, not spontaneous. A six-gate audit protocol and a trap catalog (8 traps in the main text; the full 12 in Supplement B) ship as a runnable toolbox (code/audit_gates.py) with the full v8–v14 evidence slice (audit_evidence/). All claims reproducible with fixed seeds; engineered toy, not an emergence claim.",
+  "title": "SGOED — Temporal Emergence from Dynamical Observer Coupling: A Matrix Model for Observer-Dependent Symmetry Breaking (Preprint v6)",
+  "description": "SGOED_temporal — the time-emergent extension of the atemporal SGOED framework. Toy-level computational demonstration in which a dynamical observer system Y creates a temporal direction in a main matrix system X via directional coupling -gXY·v̂²·Tr(X⁴), with IKKT-like stability gates. Audited results: eigenvalue condensation ratio 4.55±0.35 vs baseline 1.10±0.05 (well over 50σ), λ_max/λ_2 ≈ 20 (rank-1), 100% temporal-observer alignment, first-order bistability/hysteresis; a 30-seed follow-up gives a weak observer-dimension trend (slope ≈ -0.08, p=0.003) and shows the earlier n=5 pairwise significance (p=0.049) was a small-sample fluctuation (t=0.52, p=0.61 at n=30). Scans are two one-dimensional slices (d∈{2,3,4,5} at N=6; N∈{4..16} at d=3). Stated plainly: an engineered toy model, not an emergence claim. Ships manuscript (Markdown/LaTeX/PDF), engine, audit scripts and result JSONs; 100% reproducible with fixed seeds.",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "7.0.0",
+  "version": "6.0.0",
   "creators": [
     {
       "name": "Sutipong Chanpengpad",
@@ -14,14 +14,12 @@
   "license": "CC-BY-4.0",
   "access_right": "open",
   "keywords": [
-    "arrow of time",
-    "equilibrium time symmetry",
-    "past hypothesis",
-    "sequential growth",
-    "causal sets",
-    "relational light-cone",
-    "spectral dimension",
-    "scale-invariance audit",
+    "matrix models",
+    "dynamical observer",
+    "temporal emergence",
+    "symmetry breaking",
+    "eigenvalue condensation",
+    "bistability",
     "toy model",
     "reproducible computational physics"
   ],
